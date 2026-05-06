@@ -50,9 +50,13 @@ let currentTranslate = 0;
 let activeIndex = 0;
 
 function setActive(index) {
-    cards.forEach(c => c.classList.remove("active"));
+    cards.forEach((c, i) => {
+        c.classList.remove("active");
 
-    // mark ONLY the centered card
+        const depth = Math.min(Math.abs(i - index), 2);
+        c.style.setProperty("--depth", depth);
+    });
+
     if (cards[index]) {
         cards[index].classList.add("active");
     }
