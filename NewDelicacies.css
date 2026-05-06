@@ -1,0 +1,201 @@
+:root {
+    --BGColor: #172501;
+    --ContentBG: #FFF7E0;
+    --Primary-Color: #250F02;
+    --TextColorLight: #FFF7E0;
+    --TextColorDark: #3A1600;
+}
+
+#CardGrid {
+    display: grid;
+    grid-template-columns: 1fr; 
+    justify-items: center;  
+    align-items: center;  
+    gap: 5rem;
+    margin-left: 1%;
+    margin-right: 1%;
+    height: fit-content;
+    width: 100%;
+    border: 1px solid blue;
+    margin: 10%;
+}
+
+.CardContainer { 
+    width: 100%;
+    margin-bottom: 3rem;
+    background-color: white;
+}
+
+.Card {
+    background-image: url('ph2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+    width: 100%;
+    height: 25rem;
+    
+    position: relative;   
+    overflow: hidden;   
+    cursor: pointer;   
+}
+
+.CardInfo {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: inherit;
+    width: 100%;
+    text-align: center;
+
+    opacity: 0;              
+    transition: 0.3s;
+}
+
+.CardType {
+    background-color: #3C3838;
+    border-radius: 1.4em;
+    margin: 1rem 0 1rem 0;
+    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+    width: fit-content;
+    color: white;
+    font-weight: bold;
+}
+
+.CardName {
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.CardTapped {
+    background-image: url('ph2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+    width: 100%;
+    height: 25rem;
+    
+    margin-bottom: 1rem;
+    position: relative;   
+    overflow: hidden;    
+}
+
+#DisplayCardWrapper {
+    position: relative;
+    width: 90%;
+    max-width: 900px;
+}
+
+#Back {
+    position: absolute;
+    top: -15px;
+    right: -5px;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: red;
+    font-weight: bolder;
+
+    background-color: #250F02;
+
+    border: none;
+    outline: none;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+    font-size: 1.2rem;
+
+    z-index: 2100;
+}
+
+#CardWrap .Card:nth-of-type(1) {
+    background-image: url(images\ \(3\).jpg);
+    width: 100%;
+    height: 18rem;
+}
+
+#CardWrap .Card:nth-of-type(2) {
+    background-image: url(ph1.jpg);
+    width: 100%;
+    height: 25rem;
+}
+
+#ImageTapped {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    background-color: rgba(8, 8, 8, 0.925);
+    backdrop-filter: blur(3px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease;
+
+    z-index: 2000;
+}
+
+#ImageTapped.Show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#ImageTapped.Hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#ImageisTapped.Show {
+    display: block;
+}
+
+#ImageisTapped.Hide {
+    display: none;
+}
+
+#DisplayCard {
+    width: 90%;
+    max-width: 1000px;
+    height: 60vh;
+
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 1rem;
+}
+
+
+
+@media (min-width: 600px) {
+    #CardGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #DelicaciesContentBG h1{
+        font-size: 2rem;
+        padding: 3rem 0 3rem 0;
+    }      
+}
+
+@media (min-width: 900px) {
+    .DelicaciesBG {
+        font-size: 5rem;
+    }
+    
+    #CardGrid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}

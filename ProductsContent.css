@@ -1,0 +1,99 @@
+:root {
+    --BGColor: #172501;
+    --ContentBG: #FFF7E0;
+    --Primary-Color: #250F02;
+}
+
+.Weaving {
+    background-color: var(--Primary-Color);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#WContentBox {
+    background-color: var(--ContentBG);
+}
+
+.Pottery {
+    background-color: var(--ContentBG);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#PContentBox {
+    background-color: var(--Primary-Color);
+}
+
+.SideImg {
+    height: 28%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.SmallImg {
+    height: 12%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.ItemContainer {
+    width: 100%;
+    height: 100%;
+}
+
+.ContentGrid {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center; 
+    justify-content: flex-start; 
+    gap: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.Contentbox {
+    height:  90%;
+    width: 90%;
+}
+
+.Products {
+    background-color: var(--ContentBG);
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Border {
+    width: 100%;
+    height: 2rem;
+    background-color: blue;
+}
+
+#WText {
+    color: var(--TextColorDark);
+}
+
+#PText {
+    color: var(--TextColorLight);
+}
+
+.ItemContainer {
+    font-size: 0.85rem;
+    border: 1px solid red;
+    font-style: normal;
+}
+
+.ItemContainer p {
+    text-align: start;
+    font-size: 0.75rem;
+}

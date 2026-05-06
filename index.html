@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="refresh" content="5; url=MainPage.html">
+    <style>
+        body {
+            background-color: rgb(7, 29, 2);
+
+            display: flex;
+            justify-content: center; 
+            align-items: center;     
+            height: 100vh;           
+            flex-direction: column;  
+            margin: 0;               
+        }
+
+        p {
+            display: none;
+        }
+
+        img {
+            width: 25%;
+            height: auto;
+            align-self: center;
+
+            transition: all 0.2s ease-in-out;
+            animation: rotate;
+            animation-timing-function: linear;
+            animation-duration: 4s;
+            animation-iteration-count: 1;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <p>Redirecting to <a href="MainPage.html">Home</a>...</p>
+    <img src="logo.png"/>
+</body>
+</html>

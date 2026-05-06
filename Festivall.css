@@ -1,0 +1,111 @@
+:root {
+    --BGColor: #172501;
+    --ContentBG: #FFF7E0;
+    --Primary-Color: #250F02;
+    --TextColorLight: #FFF7E0;
+    --TextColorDark: #3A1600;
+
+    --main-font: 'Outfit', sans-serif;
+    --header-font: 'Kurale', serif;
+}
+
+.Festival {
+    background-color: var(--Primary-Color);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: var(--TextColorLight);
+
+    position: relative;
+}
+
+.FestivalContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    gap: 2rem;
+}
+
+.FestivalText {
+    flex: 1;
+}
+
+.Timeline {
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+}
+
+.Timeline::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background: white;
+}
+
+.Step {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: transparent;
+    border: 2px solid white;
+    cursor: pointer;
+    z-index: 2;
+    position: relative;
+    background: var(--Primary-Color);
+}
+
+.Step.active {
+    background: white;
+}
+
+.StepDesc {
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    white-space: nowrap;
+    font-size: 0.9rem;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.Step.active .StepDesc {
+    opacity: 1;
+    font-weight: bold;
+}
+
+.FestivalImage {
+    flex: 1;
+    width: 90%;
+    margin: 1rem auto 5rem auto;
+    height: 400px; 
+
+    border-radius: 1rem;
+
+    background-size: cover;
+    background-position: center;
+    background-color: blue;
+
+    transition: opacity 0.5s ease;
+    opacity: 1;
+    position: relative;
+}
+
+.label {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+
+    transform: translate(-50%, 50%); 
+
+    background: rgb(146, 1, 1);
+    padding: 10px 30px;
+    border-radius: 20px;
+}

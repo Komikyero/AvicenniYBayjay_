@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <title>Avicennia Y Bayjay</title> <!--Change Later-->
+        <link rel="icon" type="image/png" sizes="32x32" href="logo.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="logo.png">
+        <link rel="stylesheet" href="Navbar.css"/>
+        <link rel="stylesheet" href="Content.css"/>
+        <link rel="stylesheet" href="Carousels.css"/>
+        <link rel="stylesheet" href="Splash.css"/>  
+        <link rel="stylesheet" href="ProductsContent.css"/>  
+        <link rel="stylesheet" href="NewDelicacies.css"/>
+        <link rel="stylesheet" href="DestinationsAndCarousel.css"/>
+        <link rel="stylesheet" href="Festivall.css"/>
+    </head>
+    <body>
+        <div id="Splash">
+            <img id="SplashIMG" src="logo.png"/>
+        </div>
+        
+        <div id="ImageTapped">
+            <div id="DisplayCardWrapper">
+                <button id="Back">✕</button>
+                <div id="DisplayCard" class="CardTapped"></div>
+            </div>
+        </div>
+
+        <div id="DestinationTapped">
+            <div id="DDisplayCard">
+                <button id="DBack">✕</button>
+                
+                <div id="ImageContainer">
+                    <div id="DisplayCardBG"></div>
+                    <h3>Type</h3>
+                    <h1>Name</h1>
+                </div>
+
+            </div>
+        </div>
+
+        <nav id="Navbar" class="static" style="z-index: 998;"> <!--Desktop NavBar-->
+            <div class="ContentContainer">
+                <div id="HorizontalWrapper">
+                    <img id="logodesk" src="logo.png" alt="logo"/>
+                    <ul class="Navbar_items">
+                        <li><a href="#Home">Home</a></li>
+                        <li><a href="#Destinations">Destinations</a></li>
+                        <li><a href="#Products">Products</a></li>
+                        <li><a href="#Festival">Festival</a></li>
+                        <li><a href="#History">History</a></li>
+                        <li><a href="#AboutUs">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <nav id="Mobile_Navbar" class="static" style="z-index: 1000;"> <!--Mobile NavBrar-->
+            <img id="logo" src="logo.png" alt="logo"/> 
+            <ul class="Mobile_Navbar_items">
+                <li id="DropDown"><img id="burger" src="humburder.png"/> </li>
+            </ul>
+        </nav>
+        
+        <div id="SideBar" style="z-index: 1006;">
+            <ul class="Sidebar_Container">
+                <li id="Close">X</li>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#Destinations">Destinations</a></li>
+                <li><a href="#Products">Products</a></li>
+                <li><a href="#Festival">Festival</a></li>
+                <li><a href="#History">History</a></li>
+                <li><a href="#AboutUs">About Us</a></li>
+            </ul>
+        </div>
+
+        <!--Main Content-->
+        <div class="Container">
+        <div class="MainhomepageBG" id="Home">
+
+            <section aria-label="HeroPhotos">
+                <div class="carousel" data-carousel>
+                    <button class="carousel-button prev" data-carousel-button="prev">&#60;</button>
+                    <button class="carousel-button next" data-carousel-button="next">&#62;</button>
+                    <ul data-slides>
+                        <li class="slide" data-active><img src="ph1.jpg"></li>
+                        <li class="slide"><img src="ph2.jpg"></li>
+                        <li class="slide"><img src="ph3.jpg"></li>
+                    </ul>
+                </div>
+            </section>
+
+            <div id="HeroText" class="ContentContainer">
+            <!-- add text here -->
+             <p>IBAJAY, AKLAN</p>
+             <h2>PARADISE</h2>
+             <h1>in Seclusion</h1>
+             <p>Tucked away from the crowds, Ibajay is where untouched nature, rich culture, and warm hospitality create the perfect escape.</p>
+            </div>
+        </div>
+        
+        <!--DESTINATIONS-->
+        <div class="Destinations" id="Destinations">
+
+            <div id="DestBG"></div>
+            
+            <div id="InfoWrap">
+                <h1 id="InfoTitle">Katunggan it Ibajay</h1>
+                <p id="InfoText">
+                    Experience the mangrove forest and its serene beauty.
+                </p>
+                <a href="DestinationsMore.html" id="Button">Learn More</a>
+            </div>
+
+            <div class="DCarousel">
+                <div class="DTrack">
+                    <div class="Dcard" 
+                        data-bg="ph1.jpg"
+                        data-title="Katunggan it Ibajay"
+                        data-desc="Experience the mangrove forest and its serene beauty."
+                        style="background-image: url('ph1.jpg');">
+                    </div>
+
+                    <div class="Dcard"
+                        data-bg="ph2.jpg"
+                        data-title="Waterfalls"
+                        data-desc="Cool down with refreshing cascades."
+                        style="background-image: url('ph2.jpg');">
+                    </div>
+
+                    <div class="Dcard"
+                        data-bg="ph3.jpg"
+                        data-title="Forest Trail"
+                        data-desc="Walk through nature and reconnect."
+                        style="background-image: url('ph3.jpg');">
+                    </div>
+
+                                        <div class="Dcard"
+                        data-bg="ph2.jpg"
+                        data-title="Waterfalls"
+                        data-desc="Cool down with refreshing cascades."
+                        style="background-image: url('ph2.jpg');">
+                    </div>
+
+                    <div class="Dcard"
+                        data-bg="ph3.jpg"
+                        data-title="Forest Trail"
+                        data-desc="Walk through nature and reconnect."
+                        style="background-image: url('ph3.jpg');">
+                    </div>
+
+                                        <div class="Dcard"
+                        data-bg="ph2.jpg"
+                        data-title="Waterfalls"
+                        data-desc="Cool down with refreshing cascades."
+                        style="background-image: url('ph2.jpg');">
+                    </div>
+
+                    <div class="Dcard"
+                        data-bg="ph3.jpg"
+                        data-title="Forest Trail"
+                        data-desc="Walk through nature and reconnect."
+                        style="background-image: url('ph3.jpg');">
+                    </div>
+
+                                        <div class="Dcard"
+                        data-bg="ph2.jpg"
+                        data-title="Waterfalls"
+                        data-desc="Cool down with refreshing cascades."
+                        style="background-image: url('ph2.jpg');">
+                    </div>
+
+                    <div class="Dcard"
+                        data-bg="ph3.jpg"
+                        data-title="Forest Trail"
+                        data-desc="Walk through nature and reconnect."
+                        style="background-image: url('ph3.jpg');">
+                    </div>
+
+                                        <div class="Dcard"
+                        data-bg="ph2.jpg"
+                        data-title="Waterfalls"
+                        data-desc="Cool down with refreshing cascades."
+                        style="background-image: url('ph2.jpg');">
+                    </div>
+
+                    <div class="Dcard"
+                        data-bg="ph3.jpg"
+                        data-title="Forest Trail"
+                        data-desc="Walk through nature and reconnect."
+                        style="background-image: url('ph3.jpg');">
+                    </div>
+
+                                        <div class="Dcard"
+                        data-bg="ph2.jpg"
+                        data-title="Waterfalls"
+                        data-desc="Cool down with refreshing cascades."
+                        style="background-image: url('ph2.jpg');">
+                    </div>
+
+                    <div class="Dcard"
+                        data-bg="ph3.jpg"
+                        data-title="Forest Trail"
+                        data-desc="Walk through nature and reconnect."
+                        style="background-image: url('ph3.jpg');">
+                    </div>
+
+                                        <div class="Dcard"
+                        data-bg="ph2.jpg"
+                        data-title="Waterfalls"
+                        data-desc="Cool down with refreshing cascades."
+                        style="background-image: url('ph2.jpg');">
+                    </div>
+
+                    <div class="Dcard"
+                        data-bg="ph3.jpg"
+                        data-title="Forest Trail"
+                        data-desc="Walk through nature and reconnect."
+                        style="background-image: url('ph3.jpg');">
+                    </div>
+
+                                        <div class="Dcard"
+                        data-bg="ph3.jpg"
+                        data-title="Forest Trail"
+                        data-desc="Walk through nature and reconnect."
+                        style="background-image: url('ph3.jpg');">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--PRODUCTS-->
+        <div class="Weaving" id="Products">
+            <div id="WContentBox" class="Contentbox">
+                <!-- Content -->
+                 <div class="ContentGrid">
+                    <img src="ph1.jpg" class="SideImg">
+                    <div class="ItemContainer" id="WText">
+                        <p id="ProductHeader">Threads of Tradition</p>
+                        <br/>
+                        <p>Experience the artistry of nito weaving, abaca fibers, and handcrafted pottery. Rooted in culture and refined through generations, these locally made products showcase both functionality and timeless design.</p>
+                        <br/>
+                        <p>In Ibajay, weaving is more than a craft — it is a heritage passed down through generations. Using locally gathered nito vines and abaca fibers, artisans transform natural materials into functional and decorative pieces that reflect the community’s patience, skill, and deep connection to nature. Each weave carries the story of daily life shaped by tradition and resourcefulness.</p>
+                        <br/>
+                    </div>
+                    <img src="ph1.jpg" class="SmallImg">
+                </div>
+            </div>
+        </div>
+
+        <div class="Pottery">
+            <div id="PContentBox" class="Contentbox">
+                <div class="ContentGrid">
+                    <img src="ph1.jpg" class="SideImg">
+                    <div class="ItemContainer" id="PText">
+                        <h1>Threads of Tradition</h1>
+                        <br/>
+                        <p>Experience the artistry of nito weaving, abaca fibers, and handcrafted pottery. Rooted in culture and refined through generations, these locally made products showcase both functionality and timeless design.</p>
+                        <br/>
+                        <p>In Ibajay, weaving is more than a craft — it is a heritage passed down through generations. Using locally gathered nito vines and abaca fibers, artisans transform natural materials into functional and decorative pieces that reflect the community’s patience, skill, and deep connection to nature. Each weave carries the story of daily life shaped by tradition and resourcefulness.</p>
+                        <br/>
+                    </div>
+                    <img src="ph1.jpg" class="SmallImg">
+                </div>
+            </div>
+        </div>
+
+        <div class="Border"></div>
+        <div class="Products">
+
+             <div id="CardGrid">
+                <!--basta gumagana-->
+                <div class="CardContainer">
+                    <div class="Card">
+                        <div class="CardInfo">
+                            <h1>test</h1>
+                        </div>
+                    </div>
+                    <p class="CardName">Name</p>
+                    <p class="CardName">TEXT DESCRIPTION IYAA NOTE NOTE NTOENO TNEO</p>
+                </div>
+
+                <div class="CardContainer">
+                    <div class="Card">
+                        <div class="CardInfo">
+                            <h1>Test</h1>
+                        </div>
+                    </div>
+                    <p class="CardName">Name</p>
+                    <p class="CardName">TEXT DESCRIPTION IYAA NOTE NOTE NTOENO TNEO</p>
+                </div>
+
+                <div class="CardContainer">
+                    <div class="Card">
+                        <div class="CardInfo">
+                            <h1>Test</h1>
+                        </div>
+                    </div>
+                    <p class="CardName">Name</p>
+                    <p class="CardName">TEXT DESCRIPTION IYAA NOTE NOTE NTOENO TNEO</p>
+                </div>
+ 
+                <div class="CardContainer">
+                    <div class="Card">
+                        <div class="CardInfo">
+                            <h1>Test</h1>
+                        </div>
+                    </div>
+                    <p class="CardName">Name</p>
+                    <p class="CardName">TEXT DESCRIPTION IYAA NOTE NOTE NTOENO TNEO</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="Border"></div>
+
+        <!--FESTIVAL-->
+        <div class="Festival" id="Festival">
+             <div class="FestivalContent">
+
+                <div class="FestivalText">
+                    <h1 id="festTitle">Ati-Atihan Festival</h1>
+                    <p id="festDesc">Description here...</p>
+                </div>
+
+                <div class="Timeline">
+
+                    <div class="Step active" data-index="0">
+                        <span class="StepDesc">Ati-Atihan Festival</span>
+                    </div>
+
+                    <div class="Step" data-index="1">
+                        <span class="StepDesc">Drum Dancing</span>
+                    </div>
+
+                    <div class="Step" data-index="2">
+                        <span class="StepDesc">Religious Procession</span>
+                    </div>
+
+                    <div class="Step" data-index="3">
+                        <span class="StepDesc">Community Parade</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="FestivalImage" id="festImage">            
+                <div class="label">
+                    <h1>January</h1>
+                </div>
+            </div>
+
+        </div>
+
+        <!--HISTORY-->
+        <div class="History" id="History">
+             <div class="HistoryContent">
+
+                <div class="HistoryText">
+                    <h1 id="histTitle">History</h1>
+                    <p id="histDesc">Originally one of the earliest settlements in Aklan, Ibajay traces its roots to pre-colonial times when it thrived as a coastal community rich in natural resources. It became an organized town under Spanish rule around 1673, gradually developing into a center of agriculture, trade, and local governance. Over time, parts of its territory, including Nabas, were separated to form independent municipalities as the population and economy expanded.</p>
+                    <p id="histDesc">Culturally, Ibajay shares in the vibrant spirit of the Ati-Atihan Festival, reflecting deep-rooted traditions of faith, unity, and celebration. The town continues to honor its heritage through local festivities and community gatherings that highlight the identity and resilience of its people.</p>
+                    <p id="histDesc">Ibajay is also known for its rich natural and cultural attractions, including the Katunggan it Ibajay, one of the largest mangrove eco-parks in the region, as well as scenic rivers, beaches, and upland landscapes. These destinations showcase the town’s commitment to environmental preservation and sustainable tourism.</p>
+                    <p id="histDesc">Historically, Ibajay has been a hub of traditional craftsmanship. Local industries such as nito weaving, abaca fiber production, and pottery have been passed down through generations, producing handmade goods that reflect both functionality and artistry. These products remain an important part of the local economy and cultural identity.</p>
+                    <p id="histDesc">
+Today, Ibajay stands as a municipality that balances heritage and progress—preserving its traditions while embracing development. Known for its warm community, cultural richness, and natural beauty, it continues to live up to its identity as a “Paradise in Seclusion.”</p>
+                </div>
+
+            </div>
+
+            <div class="HistoryImage" id="histImage">            
+                <div class="HistoryLabel">
+                    <h1>January</h1>
+                </div>
+            </div>
+            
+        </div>
+
+        <!--ABOUTUS-->
+        <div class="AboutUs" id="AboutUs">
+            
+        </div>
+
+        <footer>
+            <div id="footerwrap">
+                <div class="fContentWrap">               
+                    <a id="footerFB" href="https://www.facebook.com/people/Pradise-Seclu/pfbid02jttiJCLVeE8CgDhnBehp43pA77VgqimBCEg5mrGC1hw91eMUoeSQc1aY3xnMiACCl/" target="_blank">
+                        <img id="fblogo" src="whitefb_bg.png" alt="Facebook"/>  
+                        <p>Avicennia Y Bayjay</p>
+                    </a>
+                </div>
+                <div class="fContentWrap">          
+                    <a id="footerEmail" href="mailto:avicenniaybayjay@gmail.com" 
+                    onclick="if(window.innerWidth > 768){ 
+                                    window.open('https://mail.google.com/mail/?view=cm&fs=1&to=avicenniaybayjay@gmail.com'); 
+                                    return false;
+                                }">
+                        <img id="emaillogo" src="emailf.png" alt="Facebook"/>         
+                        <p>avicenniaybayjay@gmail.com</p>
+                    </a>
+                </div>
+            </div>
+            <div id="FFooter">
+                <p id="copyright">
+                    © 2026 Avicennia Y Bayjay. All Rights Reserved.
+                </p>
+            </div>
+        </footer>
+        </div>
+        
+    <div id="Overlay"></div> <!--always at bottom-->
+    <script src="content.js"></script>
+    <script src="navbar.js"></script>
+    <script src="Splash.js"></script>
+    <script src="ImageCards.js"></script>
+    </body>
+</html>

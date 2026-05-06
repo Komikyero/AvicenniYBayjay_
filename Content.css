@@ -1,0 +1,220 @@
+:root {
+    --BGColor: #172501;
+    --ContentBG: #FFF7E0;
+    --Primary-Color: #250F02;
+    --TextColorLight: #FFF7E0;
+    --TextColorDark: #3A1600;
+
+    --main-font: 'Outfit', sans-serif;
+    --header-font: 'Kurale', serif;
+}
+
+@font-face {
+    font-family: 'Kurale';
+    src: url('fonts/Kurale-Regular.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('fonts/Outfit-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+#ProductHeader {
+    font-family: var(--header-font);
+    text-align: center;
+    font-size: 1.7rem;
+}
+
+h1, h2 {
+    font-family: var(--header-font);
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    font-family: var(--main-font);
+}
+
+body {
+    overflow-x: hidden;
+
+    font-family: var(--main-font);
+}
+
+.MainhomepageBG {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('placeholder_bridge.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    color: white;
+    justify-content: center;
+
+    color: white;
+}
+
+#HeroText {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 60px;
+    color: white;
+
+    pointer-events: none;
+}
+
+.MainhomepageBG p{
+    font-size: 0.7rem;
+}
+
+.HomepageBG {
+    background-image: url('placeholder_bridge.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+
+    color: rgb(255, 121, 121);
+    font-size: 5rem;
+}
+
+.MainhomepageBG, .HomepageBG {
+    font-size: 1.5rem;
+    height: 100vh; 
+}
+
+.History {
+    background-color: rgb(248, 253, 234);
+    height: fit-content;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    color: var(--TextColorLight);
+
+    color: var(--TextColorDark);
+    position: relative;
+}
+
+.HistoryContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    gap: 2rem;
+}
+
+.HistoryText {
+    flex: 1;
+}
+
+.HistoryImage {
+    width: 90%;
+    margin: 1rem auto 5rem auto;
+    height: 400px; 
+
+    border-radius: 1rem;
+
+    background-size: cover;
+    background-position: center;
+    background-color: blue;
+
+    transition: opacity 0.5s ease;
+    opacity: 1;
+    position: relative;
+}
+
+.HistoryLabel {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+
+    transform: translate(-50%, 50%); 
+
+    background: rgb(35, 146, 1);
+    padding: 10px 30px;
+    border-radius: 20px;
+}
+
+.AboutUs {
+    background-color: var(--Primary-Color);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.Container {
+    max-width: 2400px;   
+    margin: 0 auto;      
+    width: 100%;
+}
+
+.ContentContainer {
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+
+@media (min-width: 600px) {
+    .MainhomepageBG, .HomepageBG {
+        font-size: 3rem;
+    }
+
+    .MainhomepageBG p{
+        font-size: 1rem;
+    }
+
+    #InfoText {
+        font-size: 1.5frem;
+    }
+
+    #InfoWrap {
+        padding-bottom: 0;
+    }
+
+    #Button {
+        font-size: 2.5rem;
+    }
+
+    .IntroText  {
+        font-size: 3rem;
+        color: white;
+    }
+
+    .ContentContainer {
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+    
+
+}
+
+@media (min-width: 900px) {
+    .MainhomepageBG, .HomepageBG {
+        font-size: 4rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .MainhomepageBG, .HomepageBG {
+        font-size: 5rem;
+    }
+}

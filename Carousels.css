@@ -1,0 +1,90 @@
+.carousel {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.carousel > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: 200ms opacity ease-in-out;
+    transition-delay: 200ms;
+}
+
+.slide > img {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(35%);
+}
+
+.slide[data-active] {
+    opacity: 1;
+    transition-delay: 0;
+}
+
+.carousel-button {
+    position: absolute;
+    z-index: 4;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: rgba(27, 0, 0, 0.39);
+    color: rgba(255, 255, 255, 0.411);
+    font-size: 2rem;
+    font-weight: bolder;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.carousel-button:hover{
+    color: white;
+    background-color: rgba(129, 3, 3, 0.74);
+}
+
+.carousel-button.prev {
+    left: 1rem;
+}
+
+.carousel-button.next {
+    right: 1rem;
+}
+
+@media (min-width: 600px) {
+    .carousel-button {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 900px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}

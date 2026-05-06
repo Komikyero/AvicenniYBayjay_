@@ -1,0 +1,235 @@
+:root {
+    --BGColor: #172501;
+    --ContentBG: #FFF7E0;
+    --Primary-Color: #250F02;
+    --TextColorLight: #FFF7E0;
+    --TextColorDark: #3A1600;
+
+    --main-font: 'Outfit', sans-serif;
+    --header-font: 'Kurale', serif;
+}
+
+#DestBG {
+    position: absolute;
+    inset: 0;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    filter: brightness(0.156);
+    transition: opacity 0.3s ease;
+
+    z-index: 0;
+}
+
+.Destinations {
+    position: relative;   
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgb(19, 19, 19);
+    color: white;
+}
+
+#InfoWrap {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 70%;
+    padding: 2rem;
+}
+
+#InfoText {
+    font-size: 1rem;
+    color: white;
+    max-width: 600px;
+}
+
+#InfoTitle {
+    font-size: 1.5rem;
+}
+
+#Button {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 0.5rem 1.5rem;
+}
+
+.DCarousel {
+    position: absolute;
+
+    left: 0;
+    bottom: 10px;
+
+    width: 100%;
+    height: 200px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 10;
+
+    border: 2px solid red;
+}
+
+.DTrack {
+    display: flex;
+    gap: 20px;
+
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    
+    transition: transform 0.4s ease;
+    will-change: transform;
+
+    z-index: 11;
+
+    border: 2px solid blue;
+}
+
+.Dcard {
+    width: 10rem;
+    height: 13rem;
+    border-radius: 1rem;
+
+    background-size: cover;
+    background-position: center;
+
+    opacity: 0.6;
+    transform: scale(0.9);
+    transition: 0.3s;
+    cursor: pointer;
+
+    pointer-events: auto;
+    position: relative;
+    z-index: 20;
+}
+
+.Dcard.active {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+#DestinationTapped {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    background-color: rgba(8, 8, 8, 0.925);
+    backdrop-filter: blur(3px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease;
+
+    z-index: 2000;
+}
+
+#DestinationTapped.Show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#DestinationTapped.Hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#DDisplayCard {
+    width: 90%;
+    max-width: 1000px;
+    height: 80vh;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border-radius: 1rem;
+
+    background-color: var(--ContentBG);
+
+
+    position: relative;
+    z-index: 10;
+}
+
+#DisplayCardBG {
+    width: 90%;
+    height: 10rem;
+
+    background-color: red;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border-radius: 0.5rem;
+
+    margin: 1rem auto;
+
+    position: relative;
+    z-index: 10;
+}
+
+#DBack {
+    position: absolute;
+    top: -15px;
+    right: -5px;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: red;
+    font-weight: bolder;
+
+    background-color: #250F02;
+
+    border: none;
+    outline: none;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+    font-size: 1.2rem;
+
+    z-index: 2100;
+}
+
+@media (min-width: 600px) {
+    .Dcard {
+        width: 16rem;
+        height: 23rem;
+    }
+
+}
+
+@media (min-width: 900px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}
