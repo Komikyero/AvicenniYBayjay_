@@ -14,12 +14,18 @@
         <link rel="stylesheet" href="NewDelicacies.css"/>
         <link rel="stylesheet" href="DestinationsAndCarousel.css"/>
         <link rel="stylesheet" href="Festivall.css"/>
+        <link rel="stylesheet" href="AboutUs.css"/>
 
         <!--font backups-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Pacifico&display=swap" rel="stylesheet">
     <body>
+        <div id="loader">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
+
         <div id="Splash">
             <img id="SplashIMG" src="logo.png"/>
         </div>
@@ -348,7 +354,7 @@
              <div class="FestivalContent">
 
                 <div class="FestivalText">
-                    <h1 id="festTitle">Ati-Atihan Municipal and Devotional Fiesta</h1>
+                    <h1 id="festTitle">Ati-Atihan <span id="SpanText">Municipal and Devotional Fiesta</span></h1>
                     <p id="festDesc">Celebrated every January, the Ati-Atihan Festival of Ibajay is a vibrant expression of faith, culture, and unity. It brings the community to life with energetic performances, colorful traditions, and a deep connection to heritage.</p>
                 </div>
 
@@ -377,12 +383,10 @@
                 </div>
 
             </div>
-
-            <div class="FestivalImage" id="festImage">            
-
-            </div>
-                <div class="label">
-                    <h1>January • Every Year</h1>
+                <div class="FestivalImage" id="festImage">            
+                    <div class="label">
+                        <h1>January • Every Year</h1>
+                    </div>
                 </div>
         </div>
 
@@ -416,17 +420,52 @@ Today, Ibajay stands as a municipality that balances heritage and progress—pre
 
         <!--ABOUTUS-->
         <div class="AboutUs" id="AboutUs">
-            
+            <h1>Avicennia Y Bayjay</h1>
+            <div id="AboutUsGrid">
+                <div class="AboutLeft">
+                    <img src="group.jpg" />
+                </div>
+
+                <div id="AboutUsGridWrapper">
+                    <div class="AboutTabs">
+                        <button class="tab active" data-tab="team">Our Team</button>
+                        <button class="tab" data-tab="expo">School Expo</button>
+                    </div>
+
+                    <div class="AboutContent">
+                        <div class="AboutRight">
+                            <div class="tab-content active" id="team">
+                                <h2>About Us</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla interdum lobortis magna, maximus tempor odio commodo ac. Curabitur bibendum, sem a feugiat congue, orci ante facilisis purus, quis placerat tortor orci at lorem. In ut facilisis mi. Integer massa quam, elementum eget scelerisque eget, blandit sed dolor. Mauris quis erat a erat auctor accumsan vitae sit amet libero. Donec elementum nibh vitae leo porttitor sollicitudin. Aenean commodo neque eget erat pellentesque, at bibendum neque sodales.</p>
+                            </div>
+
+                            <div class="tab-content" id="expo">
+                                <h2>STI Kalibo School Exposition 2026</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla interdum lobortis magna, maximus tempor odio commodo ac. Curabitur bibendum, sem a feugiat congue, orci ante facilisis purus, quis placerat tortor orci at lorem. In ut facilisis mi. Integer massa quam, elementum eget scelerisque eget, blandit sed dolor. Mauris quis erat a erat auctor accumsan vitae sit amet libero. Donec elementum nibh vitae leo porttitor sollicitudin. Aenean commodo neque eget erat pellentesque, at bibendum neque sodales.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <footer>
             <div id="footerwrap">
+
+                <img id="FooterLogo" src="logo.png" alt="logo"/> 
+                <div id="FooterSlogans">
+                    <p id="Slogan">"Nagahiusa nga Bakhawan, Dungog it Ibajay"</p>                    
+                </div>
+
+                <hr/>
+
                 <div class="fContentWrap">               
                     <a id="footerFB" href="https://www.facebook.com/people/Pradise-Seclu/pfbid02jttiJCLVeE8CgDhnBehp43pA77VgqimBCEg5mrGC1hw91eMUoeSQc1aY3xnMiACCl/" target="_blank">
                         <img id="fblogo" src="whitefb_bg.png" alt="Facebook"/>  
                         <p>Avicennia Y Bayjay</p>
                     </a>
                 </div>
+
                 <div class="fContentWrap">          
                     <a id="footerEmail" href="mailto:avicenniaybayjay@gmail.com" 
                     onclick="if(window.innerWidth > 768){ 
@@ -437,13 +476,19 @@ Today, Ibajay stands as a municipality that balances heritage and progress—pre
                         <p>avicenniaybayjay@gmail.com</p>
                     </a>
                 </div>
+
+                <hr/>
+
+                <p>A cultural showcase of Ibajay’s heritage, festivals, and destinations, created to highlight the beauty and traditions of our hometown.</p>
             </div>
+
             <div id="FFooter">
                 <p id="copyright">
                     © 2026 Avicennia Y Bayjay. All Rights Reserved.
                 </p>
             </div>
         </footer>
+
         </div>
         
     <div id="Overlay"></div> <!--always at bottom-->

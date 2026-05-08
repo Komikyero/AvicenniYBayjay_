@@ -1,3 +1,14 @@
+//LOADING SCREEN
+window.addEventListener("load", () => {
+    const loader = document.getElementById("loader");
+
+    setTimeout(() => {
+        loader.classList.add("hidden");
+    }, 900); // small delay for smoother feel
+});
+
+//HOMEPAGE
+
 const buttons = document.querySelectorAll("[data-carousel-button]")
 
 buttons.forEach(button => {
@@ -285,3 +296,39 @@ function resetAuto() {
 });
 console.log("steps:", steps);
 console.log("step count:", steps.length);
+
+//ABOUT US
+document.addEventListener("DOMContentLoaded", () => {
+
+    const tabs = document.querySelectorAll(".tab");
+    const contents = document.querySelectorAll(".tab-content");
+
+    function setActiveTab(tab) {
+        const target = tab.dataset.tab;
+
+        // remove active states
+        tabs.forEach(t => t.classList.remove("active"));
+        contents.forEach(c => c.classList.remove("active"));
+
+        // set new active
+        tab.classList.add("active");
+
+        const activeContent = document.getElementById(target);
+        if (activeContent) {
+            activeContent.classList.add("active");
+        }
+    }
+
+    // click events
+    tabs.forEach(tab => {
+        tab.addEventListener("click", () => {
+            setActiveTab(tab);
+        });
+    });
+
+    // optional: set first tab active on load (safety fallback)
+    if (tabs.length > 0) {
+        setActiveTab(tabs[0]);
+    }
+
+});

@@ -1,100 +1,128 @@
 * {
     margin: 0;
+    box-sizing: border-box;
 }
 
 :root {
     --BGColor: #172501;
 }
 
+#loader {
+    position: fixed;
+    inset: 0;
+    background: var(--Primary-Color);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* simple spinner */
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(255,255,255,0.2);
+    border-top: 4px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+#loader p {
+    color: white;
+    margin-top: 1rem;
+}
+
 #Navbar {
+    display: none;
     position: fixed;
     top: 0;
-    height: 4.5rem;
     width: 100%;
+    height: 4.5rem;
 
-    box-shadow: 
-    0 3px 10px rgba(0, 0, 0, 0.411),
-    0 10px 25px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+    z-index: 999;
 }
 
 #logodesk {
     width: 5rem;
     height: auto;
-    transform: translate(20%, 9%);
-    margin-right: 2rem;
     cursor: pointer;
+}
+
+#HorizontalWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 1rem;
 }
 
 .Navbar_items {
     list-style: none;
     display: flex;
-    justify-content: space-between;
-    width: 50%;
+    gap: 1.5rem;
 }
 
 .Navbar_items li {
     white-space: nowrap;
 }
 
-#HorizontalWrapper {
-    display: flex;
-    align-items: center;      
-    height: inherit;  
-    justify-content: space-between;
+.Navbar_items a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.95rem;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.Navbar_items a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background: white;
+    transition: width 0.3s;
+}
+
+.Navbar_items a:hover::after {
     width: 100%;
 }
 
-#Mobile_Navbar{
-    display: none;
+#Mobile_Navbar {
+    display: block;
     position: fixed;
+    top: 0;
     width: 100%;
     height: 3.5rem;
+    z-index: 1000;
 
-        box-shadow: 
-    0 3px 10px rgba(0, 0, 0, 0.12),
-    0 10px 25px rgba(0, 0, 0, 0.18);
-}
-
-.static {
-    background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.25),
-        rgba(0, 0, 0, 0.10),
-        rgba(0, 0, 0, 0.00)
-    );
-
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
-
-    transition: all 0.5s ease;
-}
-
-.static.scrolling {
-    background-color: rgba(85, 85, 85, 0.733);
-    backdrop-filter: blur(3px);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
 }
 
 #logo {
     position: absolute;
-    left: 6.5%;
-    top: 50%; 
-    transform: translateY(-30%); 
-
-    width: 4rem;
-    height: 4rem;
-
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3.5rem;
+    height: 3.5rem;
     cursor: pointer;
-}
-
-.Mobile_Navbar_items {
-    float: right;
-    margin: 0;
-}
-
-#DropDown {
-    list-style: none;
-    text-align: end;
-    margin: 1rem;
 }
 
 #burger {
@@ -102,225 +130,152 @@
     height: 2rem;
 }
 
-#SideBar{
+#DropDown {
+    list-style: none;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.static {
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.25),
+        rgba(0,0,0,0.10),
+        transparent
+    );
+
+    backdrop-filter: blur(3px);
+    transition: all 0.4s ease;
+}
+
+#SideBar {
     position: fixed;
     top: 0;
     right: 0;
     width: 100%;
-    height: fit-content;
+    height: 100vh;
+
     background: white;
-
-    display: flex;
-    justify-content: flex-start; /* horizontal start */
-    align-items: flex-start;     /* vertical start */
-
     transform: translateX(100%);
-    transition: transform 0.4s ease;
+    transition: 0.4s ease;
+
+    z-index: 1006;
+    display: flex;
 }
 
-#SideBar.Show{
+#SideBar.Show {
     transform: translateX(0);
+}
+
+.Sidebar_Container {
+    width: 100%;
+    padding: 1rem;
 }
 
 .Sidebar_Container li {
     list-style: none;
-    font-size: 3rem;
-    margin-bottom: 1rem;
-
+    font-size: 2rem;
     border-top: 1px solid black;
-    border-left: none;
-    border-right: none;
-
-    text-align: start;
+    padding: 1rem 0;
 }
 
 .Sidebar_Container a {
-    font-size: 2rem;
-}
-
-.Sidebar_Container {
-    margin: 0;
-    padding: 0 0 0 1rem;   /* THIS removes the left space */
-    width: 100%;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: black;
 }
 
 #Close {
-    text-align: end;
-    padding-top: 1rem;
-    padding-right: 1rem;
+    text-align: right;
     font-size: 2rem;
     cursor: pointer;
 }
 
 #Overlay {
     position: fixed;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    background: rgba(0, 0, 0, 0.685);
+    inset: 0;
+    background: rgba(0,0,0,0.6);
     backdrop-filter: blur(5px);
 
     opacity: 0;
     pointer-events: none;
+    transition: 0.3s ease;
 
-    transition: opacity 0.3s ease;
-
-    z-index: 1005; 
+    z-index: 1005;
 }
-
 
 #Overlay.Show {
     opacity: 1;
-    width: 100%;
-    height: 100%;
-} 
-
-.Navbar_items a, .Sidebar_Container a{
-    text-decoration: none;
-    list-style: none;
-    color: rgb(0, 0, 0);
-    position: relative;
-    padding-bottom: 4px;
-    font-size: 1.5rem;
-    margin-right: 1rem;
-}
-
-.Navbar_items a::after {
-    content: '';
-    position: absolute;
-    height: 0.1rem;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    background: rgb(0, 0, 0);
-    transition: width .3s;
-}
-
-.Navbar_items a.Show::after {
-    content: '';
-    position: absolute;
-    height: 0.1rem;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background: rgb(0, 0, 0);
-    transition: width .3s;
-}
-
-.Navbar_items a:hover::after {
-    width: 100%;
+    pointer-events: auto;
 }
 
 footer {
+    background: var(--BGColor);
+    color: white;
     text-align: center;
-    font-weight: bold;
-    background-color: var(--BGColor);
-    color:white;
-    display: flex;
-    justify-content: center;  
-    align-items: center;      
-    flex-direction: column; 
+}
+
+#FooterLogo {
+    width: clamp(7rem, 13vw, 12rem);
+    aspect-ratio: 1 / 1;
+    margin: 0rem auto;
+}
+
+#Slogan {
+    font-style: italic;
 }
 
 #footerwrap {
-    padding-bottom: 2rem;
-    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+}
+
+.fContentWrap {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+}
+
+.fContentWrap a {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+
+    text-decoration: none;
+    color: white;
+}
+
+.fContentWrap p {
+    margin: 0;
+    text-align: left;
 }
 
 #copyright {
-    font-size: 0.65rem;
+    font-size: 0.8rem;
 }
 
 #fblogo {
-    width: 50px;
-    height: 50px;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    width: 40px;
+    height: 40px;
 }
 
 #emaillogo {
-    width: 40px;
-    height: 40px;
-    margin-top: 1rem;
-    margin-bottom: 0.8rem;
-}
+    width: 35px;
+    height: 35px;
 
-#footerFB {
-    color:white;
-    font-size: 1.2rem;
-    text-decoration: none;
-}
-
-
-#footerEmail {
-    color:white;
-    font-size: 1.2rem;
-    text-decoration: none;
+    margin-left: 0.1rem;
 }
 
 #FFooter {
-    background-color: black;
-    width: 100%;
-    height: 5rem;
-}
-
-#FFooter p {
+    background: black;
     padding: 1rem;
 }
 
-@media (max-width: 419px)  
-{
-    body {
-        background-color: rgb(255, 190, 190);
-    }
-
-    #Navbar {
-        display: none;
-    }
-
-    #Mobile_Navbar {
-        display: block;
-    }
-}
-
-@media (min-width: 420px)  
-{
-    body {
-        background-color: rgb(250, 137, 137);
-    }
-
-    #Navbar {
-        display: none;
-    }
-
-    #Mobile_Navbar {
-        display: block;
-    }
-}
-
-@media (min-width: 600px)  
-{
-    body {
-        background-color: rgb(245, 91, 91);
-    }
-
-    #Navbar {
-        display: none;
-    }
-
-    #Mobile_Navbar {
-        display: block;
-    }
-}
-
-@media (min-width: 900px)  
-{
-    body {
-        background-color: rgb(141, 56, 56);
-    }
+@media (min-width: 900px) {
 
     #Navbar {
         display: block;
@@ -332,47 +287,17 @@ footer {
 
     .Navbar_items a {
         font-size: 0.9rem;
-        color: white;
-    }
-
-
-    .Navbar_items a::after {
-        background: rgb(255, 255, 255);
-    }
-
-    .Navbar_items a.Show::after {
-        background: rgb(255, 255, 255);
     }
 
     #footerwrap {
-        display: flex;
-        align-items: center;   
-        gap: 50rem;            
-        margin-bottom: 1rem;   
-    }
-    .fContentWrap {
-        display: flex;
-        align-items: center;   
-        gap: 0.5rem;            
-        margin-bottom: 1rem;   
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: auto;
+        gap: 2rem; 
     }
 
     #copyright {
         font-size: 1rem;
-        padding-bottom: 2rem;
     }
-
-    #footerFB, #footerEmail {
-        display: flex;
-        flex-direction: row;   
-        align-items: center;  
-        gap: 0.5rem;           
-        color: white;
-        text-decoration: none;
-        font-size: 1.2rem;
-    }
-}
-
-@media (max-width: 1536px) and (min-width: 900px) {
-
 }
