@@ -11,7 +11,7 @@
 
 .Festival {
     background-color: var(--Primary-Color);
-    height: 100vh;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     color: var(--TextColorLight);
@@ -20,11 +20,12 @@
 }
 
 .FestivalContent {
-    flex: 1;
+    flex: 0 0 auto;
     display: flex;
     flex-direction: column;
     padding: 3rem;
     gap: 2rem;
+
 }
 
 .FestivalText {
@@ -71,9 +72,11 @@
     transform: translateY(-50%);
 
     white-space: nowrap;
-    font-size: 0.9rem;
+    font-size: 1rem;
     opacity: 0.5;
     transition: 0.3s;
+
+    font-family: var(--header-font);
 }
 
 .Step.active .StepDesc {
@@ -81,8 +84,22 @@
     font-weight: bold;
 }
 
+.StepDescText {
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(20%);
+
+    white-space: nowrap;
+    font-size: 0.9rem;
+    opacity: 0.5;
+    transition: 0.3s;
+
+    font-family: var(--header-font);
+}
+
+
 .FestivalImage {
-    flex: 1;
     width: 90%;
     margin: 1rem auto 5rem auto;
     height: 400px; 
@@ -102,10 +119,27 @@
     position: absolute;
     left: 50%;
     bottom: 0;
+    width: 50%;
+    font-family: var(--header-font);
+    transform: translate(-50%, -50%); 
 
-    transform: translate(-50%, 50%); 
+    border: 1px solid red;
 
+    font-size: 0.5rem;
+    opacity: 1;
     background: rgb(146, 1, 1);
     padding: 10px 30px;
     border-radius: 20px;
+}
+
+@media (min-width: 600px) {
+
+}
+
+@media (min-width: 900px) {
+
+}
+
+@media (min-width: 1200px) {
+
 }

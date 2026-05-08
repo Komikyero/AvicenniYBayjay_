@@ -41,28 +41,56 @@
     align-items: center;
     justify-content: center;
 
+    text-align: center;
     height: 70%;
-    padding: 2rem;
 }
 
 #InfoText {
     font-size: 1rem;
     color: white;
     max-width: 600px;
+    padding: 1rem;
 }
 
 #InfoTitle {
-    font-size: 1.5rem;
+    font-size: 2.3rem;
+    line-height: 1;
+    padding: 0.6rem;
 }
 
 #Button {
     margin-top: 1rem;
-    font-size: 1.5rem;
+    font-size: 0.85rem;
 
     text-decoration: none;
     color: white;
-    border: 1px solid white;
     padding: 0.5rem 1.5rem;
+
+    position: relative;
+    display: inline-block;
+}
+
+#Button::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    border: 2px solid white;
+    border-radius: 2rem;
+
+    transform: scale(0.8);
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+#Button:hover::after {
+    transform: scale(1);
+    opacity: 1;
+}
+
+#Button:active::after {
+    transform: scale(1);
+    opacity: 1;
 }
 
 .DCarousel {
@@ -108,17 +136,31 @@
     transition: 0.3s;
     cursor: pointer;
 
+    transition: transform 0.3s ease;
+
     transform: translateY(calc(var(--depth) * 20px)) 
             scale(calc(1 - var(--depth) * 0.10));
 
     pointer-events: auto;
     position: relative;
     z-index: 20;
+
+}
+
+.Dcard.active:hover {
+    animation-play-state: running;
+}
+
+@keyframes bop {
+    0%, 100% { transform: scale(1.1) translateY(-1.2rem); }
+    50%  { transform: scale(1.1) translateY(-8px); }
 }
 
 .Dcard.active {
     opacity: 1;
     transform: scale(1.1) translateY(-1.2rem);
+    animation: bop 0.9s ease-in-out infinite;
+    animation-play-state: paused;
 }
 
 #DestinationTapped {

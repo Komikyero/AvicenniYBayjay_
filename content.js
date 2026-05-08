@@ -17,6 +17,30 @@ buttons.forEach(button => {
     })
 })
 
+const scrolldown = document.getElementById("ScrollDownBtn");
+
+console.log("Scroll button:", scrolldown);
+
+scrolldown?.addEventListener("click", () => {
+    console.log("clicked");
+    document.getElementById("Destinations")
+        ?.scrollIntoView({ behavior: "smooth" });
+});
+
+
+const logobtn = document.getElementById("logodesk");
+const mlogobtn = document.getElementById("logo");
+
+logobtn?.addEventListener("click", () => {
+    document.getElementById("Home")
+        ?.scrollIntoView({ behavior: "smooth" });
+});
+
+mlogobtn?.addEventListener("click", () => {
+    document.getElementById("Home")
+        ?.scrollIntoView({ behavior: "smooth" });
+});
+
 //Destinations Carousel
 
 window.addEventListener("load", () => {

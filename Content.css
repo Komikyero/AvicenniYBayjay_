@@ -5,8 +5,11 @@
     --TextColorLight: #FFF7E0;
     --TextColorDark: #3A1600;
 
-    --main-font: 'Outfit', sans-serif;
-    --header-font: 'Kurale', serif;
+    --main-font: 'Outfit', 'Inter', Arial, sans-serif;
+    --header-font: 'Kurale', 'Georgia', serif;
+
+    --hero-header: 'Brush', 'Pacifico', cursive;
+    --hero-subheader: 'Playfair', 'Merriweather', serif;
 }
 
 @font-face {
@@ -19,6 +22,20 @@
 @font-face {
     font-family: 'Outfit';
     src: url('fonts/Outfit-Regular.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Brush';
+    src: url('fonts/AlexBrush-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Playfair';
+    src: url('fonts/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
@@ -37,12 +54,16 @@ html {
     scroll-behavior: smooth;
     scrollbar-width: none;
     font-family: var(--main-font);
+    font-weight: 100;
+    font-style: normal;
 }
 
 body {
     overflow-x: hidden;
 
     font-family: var(--main-font);
+    font-weight: 100;
+    font-style: normal;
 }
 
 .MainhomepageBG {
@@ -56,8 +77,6 @@ body {
     overflow: hidden;
     color: white;
     justify-content: center;
-
-    color: white;
 }
 
 #HeroText {
@@ -69,14 +88,51 @@ body {
     flex-direction: column;
     justify-content: center;
 
-    padding: 60px;
+    padding: 45px;
     color: white;
 
     pointer-events: none;
+
 }
 
-.MainhomepageBG p{
-    font-size: 0.7rem;
+#HeroText p,
+#HeroText h1,
+#HeroText h2,
+#HeroText hr {
+    margin: 0;
+}
+
+#HeroText hr {
+    width: clamp(100px, 50%, 150px);
+    margin-top: 0.5rem;
+    margin-bottom: 1.2rem;
+}
+
+#HeroText h1 {
+    font-family: var(--hero-header);
+    font-weight: 100;
+    font-style: normal;
+
+    font-size: clamp(3.1rem, 15vw, 16rem);
+    
+    margin-bottom: 1rem;
+
+    line-height: 0.9;
+}
+
+#HeroText h2{
+    font-family: var(--hero-subheader);
+    font-weight: 100;
+    font-style: normal;
+    font-size: clamp(1.2rem, 5vw, 5rem);
+}
+
+#HeroText p{
+    font-size: clamp(0.7rem, 0.4vw, 0.7rem);
+    font-weight: 100;
+    font-style: normal; 
+    border: 1px solid red;
+    width: clamp(160px, 60%, 600px);
 }
 
 .HomepageBG {
@@ -134,7 +190,9 @@ body {
     background-size: cover;
     background-position: center;
     background-color: blue;
-
+    box-shadow: 
+    0 3px 10px rgba(0, 0, 0, 0.12),
+    0 10px 25px rgba(0, 0, 0, 0.18);
     transition: opacity 0.5s ease;
     opacity: 1;
     position: relative;
@@ -150,6 +208,10 @@ body {
     background: rgb(35, 146, 1);
     padding: 10px 30px;
     border-radius: 20px;
+    box-shadow: 
+    0 3px 10px rgba(0, 0, 0, 0.12),
+    0 10px 25px rgba(0, 0, 0, 0.18);
+    color: var(--TextColorLight);
 }
 
 .AboutUs {
@@ -167,29 +229,43 @@ body {
     width: 100%;
 }
 
-.ContentContainer {
-    margin-right: 0.5rem;
-    margin-left: 0.5rem;
+.ScrollDown {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: white;
+    font-size: 0.8rem;
+
+    animation: bounce 1.5s infinite;
+    cursor: pointer;
+    z-index: 100;
 }
 
+.ScrollDown .arrow {
+    font-size: clamp(1.4rem, 3vw, 1.9rem);
+}
+
+.ScrollDown span {
+    font-size: clamp(0.6rem, 1.5vw, 0.7rem);
+    margin: -1rem;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(8px);
+    }
+}
 
 @media (min-width: 600px) {
-    .MainhomepageBG, .HomepageBG {
-        font-size: 3rem;
-    }
-
-    .MainhomepageBG p{
-        font-size: 1rem;
-    }
-
-    #InfoText {
-        font-size: 1.5frem;
-    }
-
-    #InfoWrap {
-        padding-bottom: 0;
-    }
-
     #Button {
         font-size: 2.5rem;
     }
@@ -203,18 +279,19 @@ body {
         margin-right: 5%;
         margin-left: 5%;
     }
-    
 
+    #HeroText p {
+        font-size: 1.3rem;
+    }
+
+    
 }
 
 @media (min-width: 900px) {
-    .MainhomepageBG, .HomepageBG {
-        font-size: 4rem;
-    }
+
+
 }
 
 @media (min-width: 1200px) {
-    .MainhomepageBG, .HomepageBG {
-        font-size: 5rem;
-    }
+
 }

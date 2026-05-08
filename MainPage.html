@@ -14,7 +14,11 @@
         <link rel="stylesheet" href="NewDelicacies.css"/>
         <link rel="stylesheet" href="DestinationsAndCarousel.css"/>
         <link rel="stylesheet" href="Festivall.css"/>
-    </head>
+
+        <!--font backups-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Pacifico&display=swap" rel="stylesheet">
     <body>
         <div id="Splash">
             <img id="SplashIMG" src="logo.png"/>
@@ -92,11 +96,16 @@
             </section>
 
             <div id="HeroText" class="ContentContainer">
-            <!-- add text here -->
              <p>IBAJAY, AKLAN</p>
+             <hr>
              <h2>PARADISE</h2>
              <h1>in Seclusion</h1>
              <p>Tucked away from the crowds, Ibajay is where untouched nature, rich culture, and warm hospitality create the perfect escape.</p>
+            </div>
+
+            <div class="ScrollDown" id="ScrollDownBtn">
+                <span>Scroll Down</span>
+                <div class="arrow">⌄</div>
             </div>
         </div>
         
@@ -106,9 +115,9 @@
             <div id="DestBG"></div>
             
             <div id="InfoWrap">
-                <h1 id="InfoTitle">Katunggan it Ibajay</h1>
+                <h1 id="InfoTitle">T</h1>
                 <p id="InfoText">
-                    Experience the mangrove forest and its serene beauty.
+                    T
                 </p>
                 <a href="DestinationsMore.html" id="Button">Learn More</a>
             </div>
@@ -116,15 +125,99 @@
             <div class="DCarousel">
                 <div class="DTrack">
                     <div class="Dcard" 
-                        data-bg="ph1.jpg"
-                        data-title="Katunggan it Ibajay"
-                        data-desc="Experience the mangrove forest and its serene beauty."
-                        style="background-image: url('ph1.jpg');">
+                        data-bg="images/DSCN0520.jpg"
+                        data-title="Ibajay Beach"
+                        data-desc="A modern beachfront resort with infinity pool, garden ambiance, and event spaces—close to town and airport access."
+                        style="background-image: url('images/DSCN0520.jpg');">
                     </div>
 
                     <div class="Dcard"
                         data-bg="ph2.jpg"
-                        data-title="Waterfalls"
+                        data-title="Katunggan It Ibajay"
+                        data-desc="Cool down with refreshing cascades."
+                        style="background-image: url('ph2.jpg');">
+                    </div>
+
+                    <div class="Dcard"
+                        data-bg="ph3.jpg"
+                        data-title="Sinba-a Falls"
+                        data-desc="Walk through nature and reconnect."
+                        style="background-image: url('images/DSCN0520.jpg');"> <!--duplicates the first three to the right-->
+                    </div>
+
+                    <div class="Dcard"
+                        data-bg="ph2.jpg"
+                        data-title="Mount Balinsayaw"
+                        data-desc="Cool down with refreshing cascades."
+                        style="background-image: url('ph2.jpg');">
+                    </div>
+
+                    <div class="Dcard"
+                        data-bg="ph3.jpg"
+                        data-title="Ibajay River"
+                        data-desc="Walk through nature and reconnect."
+                        style="background-image: url('ph3.jpg');">
+                    </div>
+
+                    <div class="Dcard"
+                        data-bg="ph2.jpg"
+                        data-title="Nablian Cold Spring"
+                        data-desc="Cool down with refreshing cascades."
+                        style="background-image: url('ph2.jpg');">
+                    </div>
+
+                    <div class="Dcard"
+                        data-bg="ph3.jpg"
+                        data-title="Campo Verde"
+                        data-desc="Walk through nature and reconnect."
+                        style="background-image: url('ph3.jpg');">
+                    </div>
+
+                    <div class="Dcard"
+                        data-bg="ph2.jpg"
+                        data-title="Gradels Place Beach Resort"
+                        data-desc="Cool down with refreshing cascades."
+                        style="background-image: url('ph2.jpg');">
+                    </div>
+
+                    <div class="Dcard"
+                        data-bg="ph3.jpg"
+                        data-title="Jamins Hotel"
+                        data-desc="Walk through nature and reconnect."
+                        style="background-image: url('ph3.jpg');">
+                    </div>
+
+                    <div class="Dcard"
+                        data-bg="ph2.jpg"
+                        data-title="Brewmstick Cafe"
+                        data-desc="Cool down with refreshing cascades."
+                        style="background-image: url('ph2.jpg');">
+                    </div>
+
+                    <div class="Dcard"
+                        data-bg="ph3.jpg"
+                        data-title="Gavino Solidum Park"
+                        data-desc="Walk through nature and reconnect."
+                        style="background-image: url('ph3.jpg');">
+                    </div>
+
+                    <div class="Dcard"
+                        data-bg="ph2.jpg"
+                        data-title="Santo Niño de Ibajay Parish"
+                        data-desc="Cool down with refreshing cascades."
+                        style="background-image: url('ph2.jpg');">
+                    </div>
+
+                    <div class="Dcard"
+                        data-bg="ph3.jpg"
+                        data-title="Parish of St. Peter the Apostle"
+                        data-desc="Walk through nature and reconnect."
+                        style="background-image: url('ph3.jpg');">
+                    </div>
+
+                    <div class="Dcard"
+                        data-bg="ph2.jpg"
+                        data-title="d architectural attraction."
                         data-desc="Cool down with refreshing cascades."
                         style="background-image: url('ph2.jpg');">
                     </div>
@@ -136,91 +229,7 @@
                         style="background-image: url('ph3.jpg');">
                     </div>
 
-                                        <div class="Dcard"
-                        data-bg="ph2.jpg"
-                        data-title="Waterfalls"
-                        data-desc="Cool down with refreshing cascades."
-                        style="background-image: url('ph2.jpg');">
-                    </div>
-
                     <div class="Dcard"
-                        data-bg="ph3.jpg"
-                        data-title="Forest Trail"
-                        data-desc="Walk through nature and reconnect."
-                        style="background-image: url('ph3.jpg');">
-                    </div>
-
-                                        <div class="Dcard"
-                        data-bg="ph2.jpg"
-                        data-title="Waterfalls"
-                        data-desc="Cool down with refreshing cascades."
-                        style="background-image: url('ph2.jpg');">
-                    </div>
-
-                    <div class="Dcard"
-                        data-bg="ph3.jpg"
-                        data-title="Forest Trail"
-                        data-desc="Walk through nature and reconnect."
-                        style="background-image: url('ph3.jpg');">
-                    </div>
-
-                                        <div class="Dcard"
-                        data-bg="ph2.jpg"
-                        data-title="Waterfalls"
-                        data-desc="Cool down with refreshing cascades."
-                        style="background-image: url('ph2.jpg');">
-                    </div>
-
-                    <div class="Dcard"
-                        data-bg="ph3.jpg"
-                        data-title="Forest Trail"
-                        data-desc="Walk through nature and reconnect."
-                        style="background-image: url('ph3.jpg');">
-                    </div>
-
-                                        <div class="Dcard"
-                        data-bg="ph2.jpg"
-                        data-title="Waterfalls"
-                        data-desc="Cool down with refreshing cascades."
-                        style="background-image: url('ph2.jpg');">
-                    </div>
-
-                    <div class="Dcard"
-                        data-bg="ph3.jpg"
-                        data-title="Forest Trail"
-                        data-desc="Walk through nature and reconnect."
-                        style="background-image: url('ph3.jpg');">
-                    </div>
-
-                                        <div class="Dcard"
-                        data-bg="ph2.jpg"
-                        data-title="Waterfalls"
-                        data-desc="Cool down with refreshing cascades."
-                        style="background-image: url('ph2.jpg');">
-                    </div>
-
-                    <div class="Dcard"
-                        data-bg="ph3.jpg"
-                        data-title="Forest Trail"
-                        data-desc="Walk through nature and reconnect."
-                        style="background-image: url('ph3.jpg');">
-                    </div>
-
-                                        <div class="Dcard"
-                        data-bg="ph2.jpg"
-                        data-title="Waterfalls"
-                        data-desc="Cool down with refreshing cascades."
-                        style="background-image: url('ph2.jpg');">
-                    </div>
-
-                    <div class="Dcard"
-                        data-bg="ph3.jpg"
-                        data-title="Forest Trail"
-                        data-desc="Walk through nature and reconnect."
-                        style="background-image: url('ph3.jpg');">
-                    </div>
-
-                                        <div class="Dcard"
                         data-bg="ph3.jpg"
                         data-title="Forest Trail"
                         data-desc="Walk through nature and reconnect."
@@ -237,37 +246,43 @@
                 <!-- Content -->
                  <div class="ContentGrid">
                     <img src="ph1.jpg" class="SideImg">
-                    <div class="ItemContainer" id="WText">
-                        <p id="ProductHeader">Threads of Tradition</p>
-                        <br/>
-                        <p>Experience the artistry of nito weaving, abaca fibers, and handcrafted pottery. Rooted in culture and refined through generations, these locally made products showcase both functionality and timeless design.</p>
-                        <br/>
-                        <p>In Ibajay, weaving is more than a craft — it is a heritage passed down through generations. Using locally gathered nito vines and abaca fibers, artisans transform natural materials into functional and decorative pieces that reflect the community’s patience, skill, and deep connection to nature. Each weave carries the story of daily life shaped by tradition and resourcefulness.</p>
-                        <br/>
+                    <div class="CVerticalWrapper">
+                        <div class="ItemContainer" id="WText">
+                            <p id="ProductHeader">Threads of Tradition</p>
+                            <br/>
+                            <p>Experience the artistry of nito weaving, abaca fibers, and handcrafted pottery. Rooted in culture and refined through generations, these locally made products showcase both functionality and timeless design.</p>
+                            <br/>
+                            <p>In Ibajay, weaving is more than a craft — it is a heritage passed down through generations. Using locally gathered nito vines and abaca fibers, artisans transform natural materials into functional and decorative pieces that reflect the community’s patience, skill, and deep connection to nature. Each weave carries the story of daily life shaped by tradition and resourcefulness.</p>
+                            <br/>
+                        </div>
+                        <img src="ph1.jpg" class="SmallImg">
                     </div>
-                    <img src="ph1.jpg" class="SmallImg">
+
                 </div>
             </div>
         </div>
 
         <div class="Pottery">
             <div id="PContentBox" class="Contentbox">
-                <div class="ContentGrid">
-                    <img src="ph1.jpg" class="SideImg">
-                    <div class="ItemContainer" id="PText">
-                        <h1>Threads of Tradition</h1>
-                        <br/>
-                        <p>Experience the artistry of nito weaving, abaca fibers, and handcrafted pottery. Rooted in culture and refined through generations, these locally made products showcase both functionality and timeless design.</p>
-                        <br/>
-                        <p>In Ibajay, weaving is more than a craft — it is a heritage passed down through generations. Using locally gathered nito vines and abaca fibers, artisans transform natural materials into functional and decorative pieces that reflect the community’s patience, skill, and deep connection to nature. Each weave carries the story of daily life shaped by tradition and resourcefulness.</p>
-                        <br/>
+                <div class="ContentGrid">                    
+                    <div class="CVerticalWrapper">
+                        <div class="ItemContainer" id="PText">
+                            <img src="ph1.jpg" class="SmallImg">
+                            <p id="ProductHeader">Nature To Craft</p>
+                            <br/>
+                            <p>From forest vines and plant fibers to hand-shaped clay, explore Ibajay’s rich tradition of nito, abaca, and pottery. Each creation embodies sustainability, heritage, and the skill of dedicated artisans.</p>
+                            <br/>
+                            <p>Rooted in Ibajay’s close relationship with its natural environment, local artisans turn raw materials like forest vines, plant fibers, and clay into meaningful creations. From nito weaving and abaca processing to handmade pottery, these crafts reflect a lifestyle shaped by sustainability, creativity, and respect for the land that sustains the community.</p>
+                            <br/>
+                        </div>
                     </div>
-                    <img src="ph1.jpg" class="SmallImg">
+                    <img src="ph1.jpg" class="SideImg">
                 </div>
             </div>
         </div>
 
         <div class="Border"></div>
+
         <div class="Products">
 
              <div id="CardGrid">
@@ -278,38 +293,50 @@
                             <h1>test</h1>
                         </div>
                     </div>
-                    <p class="CardName">Name</p>
-                    <p class="CardName">TEXT DESCRIPTION IYAA NOTE NOTE NTOENO TNEO</p>
+                    
+                    <div class="CardText">
+                        <p class="CardName">Bibingka</p>
+                        <p class="CardDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac vehicula risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut eu neque bibendum, euismod augue at, egestas eros. Aliquam tempus felis diam, vitae placerat nisl convallis eu. Donec ultrices, lacus eget sodales porta,</p>
+                    </div>
                 </div>
 
                 <div class="CardContainer">
                     <div class="Card">
                         <div class="CardInfo">
-                            <h1>Test</h1>
+                            <h1>test</h1>
                         </div>
                     </div>
-                    <p class="CardName">Name</p>
-                    <p class="CardName">TEXT DESCRIPTION IYAA NOTE NOTE NTOENO TNEO</p>
+                    
+                    <div class="CardText">
+                        <p class="CardName">Pinais</p>
+                        <p class="CardDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac vehicula risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut eu neque bibendum, euismod augue at, egestas eros. Aliquam tempus felis diam, vitae placerat nisl convallis eu. Donec ultrices, lacus eget sodales porta,</p>
+                    </div>
                 </div>
 
                 <div class="CardContainer">
                     <div class="Card">
                         <div class="CardInfo">
-                            <h1>Test</h1>
+                            <h1>test</h1>
                         </div>
                     </div>
-                    <p class="CardName">Name</p>
-                    <p class="CardName">TEXT DESCRIPTION IYAA NOTE NOTE NTOENO TNEO</p>
+                    
+                    <div class="CardText">
+                        <p class="CardName">Puto sa Bagoe</p>
+                        <p class="CardDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac vehicula risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut eu neque bibendum, euismod augue at, egestas eros. Aliquam tempus felis diam, vitae placerat nisl convallis eu. Donec ultrices, lacus eget sodales porta,</p>
+                    </div>
                 </div>
  
                 <div class="CardContainer">
                     <div class="Card">
                         <div class="CardInfo">
-                            <h1>Test</h1>
+                            <h1>test</h1>
                         </div>
                     </div>
-                    <p class="CardName">Name</p>
-                    <p class="CardName">TEXT DESCRIPTION IYAA NOTE NOTE NTOENO TNEO</p>
+                    
+                    <div class="CardText">
+                        <p class="CardName">Huwad - Huwad</p>
+                        <p class="CardDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac vehicula risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut eu neque bibendum, euismod augue at, egestas eros. Aliquam tempus felis diam, vitae placerat nisl convallis eu. Donec ultrices, lacus eget sodales porta,</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -321,26 +348,30 @@
              <div class="FestivalContent">
 
                 <div class="FestivalText">
-                    <h1 id="festTitle">Ati-Atihan Festival</h1>
-                    <p id="festDesc">Description here...</p>
+                    <h1 id="festTitle">Ati-Atihan Municipal and Devotional Fiesta</h1>
+                    <p id="festDesc">Celebrated every January, the Ati-Atihan Festival of Ibajay is a vibrant expression of faith, culture, and unity. It brings the community to life with energetic performances, colorful traditions, and a deep connection to heritage.</p>
                 </div>
 
                 <div class="Timeline">
 
                     <div class="Step active" data-index="0">
-                        <span class="StepDesc">Ati-Atihan Festival</span>
+                        <span class="StepDesc">Street Dancing Competitions</span>
+                        <p class="StepDescText">Watch groups perform synchronized routines in striking tribal-inspired costumes, moving to the beat of drums.</p>
                     </div>
 
                     <div class="Step" data-index="1">
-                        <span class="StepDesc">Drum Dancing</span>
+                        <span class="StepDesc">Drum Beating and Music Performances</span>
+                        <p class="StepDescText">Feel the pulse of the festival through powerful rhythms echoing across the streets.</p>
                     </div>
 
                     <div class="Step" data-index="2">
-                        <span class="StepDesc">Religious Procession</span>
+                        <span class="StepDesc">Religious Processions</span>
+                        <p class="StepDescText">Witness solemn yet beautiful parades honoring the Santo Niño, blending devotion with tradition.</p>
                     </div>
 
                     <div class="Step" data-index="3">
-                        <span class="StepDesc">Community Parade</span>
+                        <span class="StepDesc">Community Parades</span>
+                        <p class="StepDescText">See the town come together in vibrant processions filled with color, creativity, and pride.</p>
                     </div>
 
                 </div>
@@ -348,11 +379,11 @@
             </div>
 
             <div class="FestivalImage" id="festImage">            
-                <div class="label">
-                    <h1>January</h1>
-                </div>
-            </div>
 
+            </div>
+                <div class="label">
+                    <h1>January • Every Year</h1>
+                </div>
         </div>
 
         <!--HISTORY-->
@@ -362,9 +393,13 @@
                 <div class="HistoryText">
                     <h1 id="histTitle">History</h1>
                     <p id="histDesc">Originally one of the earliest settlements in Aklan, Ibajay traces its roots to pre-colonial times when it thrived as a coastal community rich in natural resources. It became an organized town under Spanish rule around 1673, gradually developing into a center of agriculture, trade, and local governance. Over time, parts of its territory, including Nabas, were separated to form independent municipalities as the population and economy expanded.</p>
+                    <br/>
                     <p id="histDesc">Culturally, Ibajay shares in the vibrant spirit of the Ati-Atihan Festival, reflecting deep-rooted traditions of faith, unity, and celebration. The town continues to honor its heritage through local festivities and community gatherings that highlight the identity and resilience of its people.</p>
+                    <br/>
                     <p id="histDesc">Ibajay is also known for its rich natural and cultural attractions, including the Katunggan it Ibajay, one of the largest mangrove eco-parks in the region, as well as scenic rivers, beaches, and upland landscapes. These destinations showcase the town’s commitment to environmental preservation and sustainable tourism.</p>
+                    <br/>
                     <p id="histDesc">Historically, Ibajay has been a hub of traditional craftsmanship. Local industries such as nito weaving, abaca fiber production, and pottery have been passed down through generations, producing handmade goods that reflect both functionality and artistry. These products remain an important part of the local economy and cultural identity.</p>
+                    <br/>
                     <p id="histDesc">
 Today, Ibajay stands as a municipality that balances heritage and progress—preserving its traditions while embracing development. Known for its warm community, cultural richness, and natural beauty, it continues to live up to its identity as a “Paradise in Seclusion.”</p>
                 </div>
