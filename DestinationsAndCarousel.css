@@ -97,7 +97,7 @@
     position: absolute;
 
     left: 0;
-    bottom: 20px;
+    bottom: 40px;
 
     width: 100%;
     height: 200px;
@@ -105,7 +105,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
     z-index: 10;
 }
 
@@ -123,6 +122,18 @@
     z-index: 11;
 }
 
+#ImageContainer h1, 
+#ImageContainer h3, 
+#ImageContainer p{
+    margin-left: 5%;
+}
+
+#ImageContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
 .Dcard {
     width: 10rem;
     height: 13rem;
@@ -135,7 +146,9 @@
     transform: scale(0.9);
     transition: 0.3s;
     cursor: pointer;
-
+    box-shadow: 
+    0 3px 10px rgba(0, 0, 0, 0.12),
+    0 10px 25px rgba(0, 0, 0, 0.18);
     transition: transform 0.3s ease;
 
     transform: translateY(calc(var(--depth) * 20px)) 
@@ -149,6 +162,87 @@
 
 .Dcard.active:hover {
     animation-play-state: running;
+}
+
+#DestinationCardLabel {
+    width: fit-content;
+
+    padding: 0.45rem 1rem;
+
+    border-radius: 999px;
+
+    background: #556B2F;
+    color: white;
+
+    font-size: clamp(0.7rem, 1.5vw, 0.9rem);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    font-family: var(--main-font);
+
+    box-shadow:
+    0 3px 8px rgba(0,0,0,0.15);
+
+    transition: 0.3s ease;
+    
+    cursor: none;
+}
+
+#DestinationCardLabel:hover {
+    transform: translateY(-2px);
+    background: #6B8440;
+}
+
+.DirectionsBtn {
+    width: 90%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+    padding: 0.9rem 1.2rem;
+    margin: 0 auto;
+    border-radius: 1rem;
+
+    text-decoration: none;
+
+    background: linear-gradient(
+        135deg,
+        #4f3d2f,
+        #6b4a2f
+    );
+
+    color: white;
+
+    font-family: var(--main-font);
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+
+    box-shadow:
+    0 6px 16px rgba(0,0,0,0.18);
+
+    transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.DirectionsBtn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+    0 10px 22px rgba(0,0,0,0.22);
+}
+
+.DirectionsBtn:active {
+    transform: scale(0.98);
+}
+
+.DirectionsBtn img {
+    width: 1.1rem;
+    height: 1.1rem;
 }
 
 @keyframes bop {
@@ -169,8 +263,11 @@
     left: 0;
     width: 100%;
     height: 100vh;
-
-    background-color: rgba(8, 8, 8, 0.925);
+    border: 1px solid red;
+    box-shadow: 
+    0 3px 10px rgba(0, 0, 0, 0.12),
+    0 10px 25px rgba(0, 0, 0, 0.18);
+    background-color: rgba(8, 8, 8, 0.548);
     backdrop-filter: blur(3px);
 
     display: flex;
@@ -199,7 +296,7 @@
     width: 90%;
     max-width: 1000px;
     height: 80vh;
-
+    border: 1px solid blue;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -208,15 +305,34 @@
 
     background-color: var(--ContentBG);
 
+    overflow: visible;
 
     position: relative;
     z-index: 10;
 }
 
+#DScrollContent {
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    border-radius: 1rem;
+}
+
+#DScrollContent::-webkit-scrollbar {
+    width: 5px;
+}
+
+#DScrollContent::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.3);
+    border-radius: 999px;
+}
+
 #DisplayCardBG {
     width: 90%;
     height: 10rem;
-
+    box-shadow: 
+    0 10px 25px rgba(0, 0, 0, 0.18);
     background-color: red;
 
     background-size: cover;
@@ -235,18 +351,20 @@
     position: absolute;
     top: -15px;
     right: -5px;
-
+    display: inline-block;
     width: 40px;
     height: 40px;
-
+    box-shadow: 
+    0 3px 10px rgba(0, 0, 0, 0.12),
+    0 10px 25px rgba(0, 0, 0, 0.18);
     display: flex;
     align-items: center;
     justify-content: center;
 
-    color: red;
+    color: #F7F0ED;
     font-weight: bolder;
 
-    background-color: #250F02;
+    background-color: #321D16;
 
     border: none;
     outline: none;
@@ -257,14 +375,29 @@
     font-size: 1.2rem;
 
     z-index: 2100;
+
+    transition: transform 0.3s ease;
+}
+
+#DBack:hover {
+    transform: scale(1.2);
+}
+
+#LocationWrapper p {
+    padding:0.5rem 0 0.5rem 0;
 }
 
 @media (min-width: 600px) {
     .Dcard {
-        width: 16rem;
-        height: 23rem;
+        width: 14rem;
+        height: 20rem;
     }
 
+    #InfoTitle {
+        font-size: 4rem;
+        line-height: 1;
+        padding: 0.6rem;
+    }
 }
 
 @media (min-width: 900px) {

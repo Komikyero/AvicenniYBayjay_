@@ -1,8 +1,8 @@
 :root {
     --BGColor: #172501;
-    --ContentBG: #FFF7E0;
-    --Primary-Color: #250F02;
-    --TextColorLight: #FFF7E0;
+    --ContentBG: #F7F0ED;
+    --Primary-Color: #321D16;
+    --TextColorLight: #F7F0ED;
     --TextColorDark: #3A1600;
 
     --main-font: 'Outfit', 'Inter', Arial, sans-serif;
@@ -28,7 +28,7 @@
 
 @font-face {
     font-family: 'Brush';
-    src: url('fonts/AlexBrush-Regular.ttf') format('truetype');
+    src: url('fonts/PetitFormalScript-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
@@ -113,9 +113,9 @@ body {
     font-weight: 100;
     font-style: normal;
 
-    font-size: clamp(3.1rem, 15vw, 16rem);
+    font-size: clamp(4rem, 15vw, 16rem);
     
-    margin-bottom: 1rem;
+    margin: 1rem 0 0.5rem 0;
 
     line-height: 0.9;
 }
@@ -128,10 +128,10 @@ body {
 }
 
 #HeroText p{
-    font-size: clamp(0.7rem, 0.4vw, 0.7rem);
+    font-size: clamp(0.9rem, 0.4vw, 0.7rem);
     font-weight: 100;
     font-style: normal; 
-    border: 1px solid red;
+    
     width: clamp(160px, 60%, 600px);
 }
 
@@ -157,15 +157,23 @@ body {
 }
 
 .History {
-    background-color: rgb(248, 253, 234);
-    height: fit-content;
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-    color: var(--TextColorLight);
-
+    background-color: #EEF5E9;
     color: var(--TextColorDark);
-    position: relative;
+
+    width: 100%;
+}
+
+.HistoryWrapper {
+    width: min(1400px, 100%);
+    
+    margin-inline: auto;
+
+    padding-inline: clamp(1rem, 4vw, 5rem);
+    padding-block: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 }
 
 .HistoryContent {
@@ -200,18 +208,30 @@ body {
 
 .HistoryLabel {
     position: absolute;
-    left: 50%;
-    bottom: 0;
 
-    transform: translate(-50%, 50%); 
+    bottom: -20px;
 
-    background: rgb(35, 146, 1);
-    padding: 10px 30px;
-    border-radius: 20px;
-    box-shadow: 
-    0 3px 10px rgba(0, 0, 0, 0.12),
-    0 10px 25px rgba(0, 0, 0, 0.18);
+    left: 0;
+    right: 0;
+
+    margin-inline: auto;
+
+    width: max-content;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: var(--TextColorLight);
+    padding: 0.6rem 1.5rem;
+
+    border-radius: 999px;
+
+    background: #324721;
+
+    font-family: var(--header-font);
+    font-size: 0.75rem;
+
+    z-index: 10;
 }
 
 .Container {
@@ -231,8 +251,8 @@ body {
     align-items: center;
 
     color: white;
-    font-size: 0.8rem;
-
+    font-size: 0.85rem;
+    opacity: 0.6;
     animation: bounce 1.5s infinite;
     cursor: pointer;
     z-index: 100;
@@ -243,8 +263,25 @@ body {
 }
 
 .ScrollDown span {
-    font-size: clamp(0.6rem, 1.5vw, 0.7rem);
+    font-size: clamp(0.7rem, 1.5vw, 0.7rem);
     margin: -1rem;
+}
+
+/*RENDERING*/
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+
+    transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+
+    will-change: transform, opacity;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 @keyframes bounce {
@@ -275,15 +312,30 @@ body {
         font-size: 1.3rem;
     }
 
-    .History {
-        flex-direction: row;
-        align-items: center;
-        gap: 2rem;
+    body {
+        font-size: 1.1rem;
     }
 
+    h1 {
+        font-size: 3.5rem;
+    }
 }
 
 @media (min-width: 900px) {
+    .FestivalWrapper {
+        flex-direction:row-reverse;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    .FestivalContent {
+        flex: 1;
+    }
+
+    .FestivalImage {
+        flex: 1;
+        max-width: 650px;
+    }
 
 
 }

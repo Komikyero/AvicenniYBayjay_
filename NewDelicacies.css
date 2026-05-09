@@ -116,25 +116,28 @@
 #DisplayCardWrapper {
     position: relative;
     width: 90%;
-    max-width: 900px;
+
+    border: 1px solid red;
 }
 
 #Back {
     position: absolute;
     top: -15px;
     right: -5px;
-
+    display: inline-block;
     width: 40px;
     height: 40px;
-
+    box-shadow: 
+    0 3px 10px rgba(0, 0, 0, 0.12),
+    0 10px 25px rgba(0, 0, 0, 0.18);
     display: flex;
     align-items: center;
     justify-content: center;
 
-    color: red;
+    color: #F7F0ED;
     font-weight: bolder;
 
-    background-color: #250F02;
+    background-color: #321D16;
 
     border: none;
     outline: none;
@@ -145,6 +148,8 @@
     font-size: 1.2rem;
 
     z-index: 2100;
+
+    transition: transform 0.3s ease;
 }
 
 #CardWrap .Card:nth-of-type(1) {
@@ -200,8 +205,7 @@
 }
 
 #DisplayCard {
-    width: 90%;
-    max-width: 1000px;
+    width: 100%;
     height: 60vh;
 
     background-size: cover;
@@ -209,8 +213,6 @@
 
     border-radius: 1rem;
 }
-
-
 
 @media (min-width: 600px) {
     #CardGrid {
@@ -221,6 +223,14 @@
         font-size: 2rem;
         padding: 3rem 0 3rem 0;
     }      
+
+    #DisplayCardWrapper {
+        width: 60%;
+    }
+
+    #DisplayCard {
+        height: 80vh;
+    }
 }
 
 @media (min-width: 900px) {

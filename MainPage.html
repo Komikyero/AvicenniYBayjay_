@@ -40,13 +40,24 @@
         <div id="DestinationTapped">
             <div id="DDisplayCard">
                 <button id="DBack">✕</button>
-                
-                <div id="ImageContainer">
-                    <div id="DisplayCardBG"></div>
-                    <h3>Type</h3>
-                    <h1>Name</h1>
-                </div>
 
+                <div id="DScrollContent">
+                    <div id="ImageContainer">
+                        <div id="DisplayCardBG"></div>
+                        <h3 id="DestinationCardLabel">Label</h3>
+                        <h1 id="DestinationCardName">Name</h1>
+                        <div id="LocationWrapper">
+                            <p>SomeWhere Ibajay</p>
+                            <p>Somethhing away from proper</p>
+                        </div>
+                        <hr/>
+                        <p id="CardDescription">Text</p>
+                        <a href="#" class="DirectionsBtn">
+                            <img src="map.png" alt="">
+                            <span>Directions</span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -94,21 +105,29 @@
                     <button class="carousel-button prev" data-carousel-button="prev">&#60;</button>
                     <button class="carousel-button next" data-carousel-button="next">&#62;</button>
                     <ul data-slides>
-                        <li class="slide" data-active><img src="ph1.jpg"></li>
-                        <li class="slide"><img src="ph2.jpg"></li>
-                        <li class="slide"><img src="ph3.jpg"></li>
+                        <li class="slide" data-active>    
+                            <video loop autoplay muted playsinline>
+                                <source src="Background.mp4" type="video/mp4">
+                            </video></li>
+                        <li class="slide"><img src="images/DJI_0203.jpg"></li>
+                        <li class="slide"><img src="images/387145350_144651095396296_7959629525284625735_n.jpg"></li>
+                        <li class="slide"><img src="images/DJI_0234.jpg"></li>
+                        <li class="slide"><img src="images/DSCN0460.jpg"></li>
+                        <li class="slide"><img src="images/DSCN0673.jpg"></li>
+                        <li class="slide"><img src="images/DSCN0682.jpg"></li>
+                        <li class="slide"><img src="images/DJI_0307.jpg"></li>
                     </ul>
                 </div>
             </section>
 
             <div id="HeroText" class="ContentContainer">
-             <p>IBAJAY, AKLAN</p>
-             <hr>
-             <h2>PARADISE</h2>
-             <h1>in Seclusion</h1>
+             <p>Paradise in Seclusion</p>
+             <h1>Ibajay</h1>
+
+            <hr>
+
              <p>Tucked away from the crowds, Ibajay is where untouched nature, rich culture, and warm hospitality create the perfect escape.</p>
             </div>
-
             <div class="ScrollDown" id="ScrollDownBtn">
                 <span>Scroll Down</span>
                 <div class="arrow">⌄</div>
@@ -120,7 +139,7 @@
 
             <div id="DestBG"></div>
             
-            <div id="InfoWrap">
+            <div id="InfoWrap" class="reveal">
                 <h1 id="InfoTitle">T</h1>
                 <p id="InfoText">
                     T
@@ -128,117 +147,134 @@
                 <a href="DestinationsMore.html" id="Button">Learn More</a>
             </div>
 
-            <div class="DCarousel">
+            <div class="DCarousel reveal">
                 <div class="DTrack">
                     <div class="Dcard" 
                         data-bg="images/DSCN0520.jpg"
+                        data-label="BEACH"
                         data-title="Ibajay Beach"
-                        data-desc="A modern beachfront resort with infinity pool, garden ambiance, and event spaces—close to town and airport access."
+                        data-desc="A long stretch of pristine shoreline offering calm waters, fresh sea breeze, and laid-back island vibes. Ideal for family outings and beach relaxation."
+                        data-carddesc="A long stretch of white sand coastline with calm waters and scenic views. It is ideal for swimming, picnics, and family outings. Its peaceful atmosphere makes it a relaxing seaside destination."
                         style="background-image: url('images/DSCN0520.jpg');">
                     </div>
 
                     <div class="Dcard"
                         data-bg="ph2.jpg"
+                        data-label="NATURAL"
                         data-title="Katunggan It Ibajay"
-                        data-desc="Cool down with refreshing cascades."
+                        data-desc="Step into a living mangrove sanctuary with a scenic wooden boardwalk surrounded by lush forests and wildlife. A must-visit eco-adventure for nature lovers and photographers."
+                        data-carddesc="Katunggan It Ibajay is a 44.22-hectare eco-park known for its rich mangrove forest ecosystem and elevated wooden boardwalk. Home to 28 mangrove species, including the rare Avicennia rumphiana, the park also serves as a sanctuary for wildlife and migratory birds. Visitors can enjoy nature walks, birdwatching, and educational eco-tours while learning about environmental conservation."
                         style="background-image: url('ph2.jpg');">
                     </div>
 
                     <div class="Dcard"
                         data-bg="ph3.jpg"
+                        data-label="WATERFALL"
                         data-title="Sinba-a Falls"
-                        data-desc="Walk through nature and reconnect."
+                        data-desc="A hidden multi-tiered waterfall surrounded by lush forest. It offers a refreshing nature escape with cool pools and a short trek through scenic trails."
                         style="background-image: url('images/DSCN0520.jpg');"> <!--duplicates the first three to the right-->
                     </div>
 
                     <div class="Dcard"
                         data-bg="ph2.jpg"
+                        data-label="MOUNTAIN"
                         data-title="Mount Balinsayaw"
-                        data-desc="Cool down with refreshing cascades."
+                        data-desc="A beginner-friendly hiking destination with scenic forest trails and a summit view overlooking Aklan and Antique. Popular for trekking and nature exploration"
                         style="background-image: url('ph2.jpg');">
                     </div>
 
                     <div class="Dcard"
                         data-bg="ph3.jpg"
+                        data-label="NATURAL"
                         data-title="Ibajay River"
-                        data-desc="Walk through nature and reconnect."
+                        data-desc="A major river system known for clear waters, rapids, and eco-tourism activities like rafting and kayaking. It also supports local fishing and farming communities."
                         style="background-image: url('ph3.jpg');">
                     </div>
 
                     <div class="Dcard"
                         data-bg="ph2.jpg"
+                        data-label="NATURAL"
                         data-title="Nablian Cold Spring"
-                        data-desc="Cool down with refreshing cascades."
+                        data-desc="A natural cold spring surrounded by greenery, featuring swimming pools, cottages, and picnic areas. A relaxing family-friendly destination close to town."
                         style="background-image: url('ph2.jpg');">
                     </div>
 
                     <div class="Dcard"
                         data-bg="ph3.jpg"
+                        data-label="NATURAL"
                         data-title="Campo Verde"
-                        data-desc="Walk through nature and reconnect."
+                        data-desc="A highland nature retreat known for its cool climate, pine forests, and trekking trails. A popular destination for camping, hiking, and summer escapes."
                         style="background-image: url('ph3.jpg');">
                     </div>
 
                     <div class="Dcard"
                         data-bg="ph2.jpg"
+                        data-label="RESORT"
                         data-title="Gradels Place Beach Resort"
-                        data-desc="Cool down with refreshing cascades."
+                        data-desc="A beachfront resort offering cottages, a swimming pool, and relaxing sea views. A quiet getaway perfect for swimming, dining, and sunset experiences."
                         style="background-image: url('ph2.jpg');">
                     </div>
 
                     <div class="Dcard"
                         data-bg="ph3.jpg"
+                        data-label="HOTEL"
                         data-title="Jamins Hotel"
-                        data-desc="Walk through nature and reconnect."
+                        data-desc="A modern tropical beachfront hotel featuring an infinity pool, garden setting, café, and event spaces. Conveniently located near town and accessible from the airport, ideal for leisure and events."
                         style="background-image: url('ph3.jpg');">
                     </div>
 
                     <div class="Dcard"
                         data-bg="ph2.jpg"
+                        data-label="CAFÉ"
                         data-title="Brewmstick Cafe"
-                        data-desc="Cool down with refreshing cascades."
+                        data-desc="A modern and cozy café known for its signature coffee drinks, pastries, and relaxing ambiance. Popular among locals and tourists as a casual hangout and remote work spot along the highway."
                         style="background-image: url('ph2.jpg');">
                     </div>
 
                     <div class="Dcard"
                         data-bg="ph3.jpg"
+                        data-label="LANDMARK"
                         data-title="Gavino Solidum Park"
-                        data-desc="Walk through nature and reconnect."
+                        data-desc="The town’s central public plaza featuring landscaped gardens, open spaces, and event areas. It serves as the main venue for festivals, community gatherings, and daily recreation."
                         style="background-image: url('ph3.jpg');">
                     </div>
 
                     <div class="Dcard"
                         data-bg="ph2.jpg"
+                        data-label="HERITAGE"
                         data-title="Santo Niño de Ibajay Parish"
-                        data-desc="Cool down with refreshing cascades."
+                        data-desc="A historic Catholic church and spiritual landmark known for its devotion to Santo Niño. It plays a central role in religious celebrations and cultural traditions in Ibajay."
                         style="background-image: url('ph2.jpg');">
                     </div>
 
                     <div class="Dcard"
                         data-bg="ph3.jpg"
+                        data-label="HERITAGE"
                         data-title="Parish of St. Peter the Apostle"
-                        data-desc="Walk through nature and reconnect."
+                        data-desc="A well-known church featuring stained-glass windows and a prominent bell tower. It serves as a major place of worship and community activities in the town center."
                         style="background-image: url('ph3.jpg');">
                     </div>
 
                     <div class="Dcard"
                         data-bg="ph2.jpg"
-                        data-title="d architectural attraction."
-                        data-desc="Cool down with refreshing cascades."
+                        data-label="NATURAL"
+                        data-title="Nawidwid Falls"
+                        data-desc="A tall and secluded waterfall surrounded by dense greenery. A great spot for adventure seekers, photography, and nature swimming after a forest hike."
                         style="background-image: url('ph2.jpg');">
                     </div>
 
                     <div class="Dcard"
                         data-bg="ph3.jpg"
-                        data-title="Forest Trail"
-                        data-desc="Walk through nature and reconnect."
+                        data-label="NATURAL"
+                        data-title="L and C Housetel"
+                        data-desc="A budget-friendly accommodation in the town center offering comfortable rooms and easy access to markets, churches, and municipal areas."
                         style="background-image: url('ph3.jpg');">
                     </div>
 
                     <div class="Dcard"
                         data-bg="ph3.jpg"
-                        data-title="Forest Trail"
-                        data-desc="Walk through nature and reconnect."
+                        data-title="Satoriya"
+                        data-desc="A peaceful nature retreat and events venue surrounded by greenery. Ideal for weddings, gatherings, and private relaxation away from the town center."
                         style="background-image: url('ph3.jpg');">
                     </div>
                 </div>
@@ -249,21 +285,16 @@
         <!--PRODUCTS-->
         <div class="Weaving" id="Products">
             <div id="WContentBox" class="Contentbox">
-                <!-- Content -->
-                 <div class="ContentGrid">
-                    <img src="ph1.jpg" class="SideImg">
+                 <div class="ContentGrid" id="Test">
+                    <img src="images/Weaving1.jpg" class="SideImg reveal">
                     <div class="CVerticalWrapper">
                         <div class="ItemContainer" id="WText">
-                            <p id="ProductHeader">Threads of Tradition</p>
-                            <br/>
-                            <p>Experience the artistry of nito weaving, abaca fibers, and handcrafted pottery. Rooted in culture and refined through generations, these locally made products showcase both functionality and timeless design.</p>
-                            <br/>
-                            <p>In Ibajay, weaving is more than a craft — it is a heritage passed down through generations. Using locally gathered nito vines and abaca fibers, artisans transform natural materials into functional and decorative pieces that reflect the community’s patience, skill, and deep connection to nature. Each weave carries the story of daily life shaped by tradition and resourcefulness.</p>
-                            <br/>
-                        </div>
-                        <img src="ph1.jpg" class="SmallImg">
+                            <p id="ProductHeader" class="reveal">Threads of Tradition</p>
+                            <p class="reveal">Weaving in Ibajay is a cultural practice shaped by generations of craftsmanship and tradition. Using nito vines and abaca fibers, artisans create functional and decorative products that reflect skill, patience, and creativity.</p>
+                            <p class="reveal">Rooted in local heritage, each woven piece highlights the community’s connection to nature and sustainable living. These handcrafted works preserve traditional techniques while continuing to serve everyday use and cultural expression.</p>
+                            <img src="images/Weaving2.jpg" class="SmallImg reveal">
+                        </div>  
                     </div>
-
                 </div>
             </div>
         </div>
@@ -271,94 +302,93 @@
         <div class="Pottery">
             <div id="PContentBox" class="Contentbox">
                 <div class="ContentGrid">                    
-                    <div class="CVerticalWrapper">
+                    <div class="CVerticalWrapper reveal">
                         <div class="ItemContainer" id="PText">
-                            <img src="ph1.jpg" class="SmallImg">
-                            <p id="ProductHeader">Nature To Craft</p>
-                            <br/>
-                            <p>From forest vines and plant fibers to hand-shaped clay, explore Ibajay’s rich tradition of nito, abaca, and pottery. Each creation embodies sustainability, heritage, and the skill of dedicated artisans.</p>
-                            <br/>
-                            <p>Rooted in Ibajay’s close relationship with its natural environment, local artisans turn raw materials like forest vines, plant fibers, and clay into meaningful creations. From nito weaving and abaca processing to handmade pottery, these crafts reflect a lifestyle shaped by sustainability, creativity, and respect for the land that sustains the community.</p>
-                            <br/>
+                            <h1>Rooted in Tradition,</h1>
+                            <h1>Crafted by Nature.</h1>
+                            <img src="Images/Pottery1.jpg" class="SmallImg reveal">
+                            <p id="ProductHeader" class="reveal">Nature To Craft</p>
+                            <p class="reveal">From forest vines and plant fibers to hand-shaped clay, explore Ibajay’s rich tradition of nito, abaca, and pottery. Each creation embodies sustainability, heritage, and the skill of dedicated artisans.</p>
+                            <p class="reveal">Rooted in Ibajay’s close relationship with its natural environment, local artisans turn raw materials like forest vines, plant fibers, and clay into meaningful creations. From nito weaving and abaca processing to handmade pottery, these crafts reflect a lifestyle shaped by sustainability, creativity, and respect for the land that sustains the community.</p>
                         </div>
                     </div>
-                    <img src="ph1.jpg" class="SideImg">
+                    <img src="images/Pottery2.jpg" class="SideImg reveal">
                 </div>
             </div>
         </div>
 
-        <div class="Border"></div>
 
         <div class="Products">
 
              <div id="CardGrid">
                 <!--basta gumagana-->
-                <div class="CardContainer">
+                <div class="CardContainer reveal">
                     <div class="Card">
                         <div class="CardInfo">
                             <h1>test</h1>
                         </div>
                     </div>
                     
-                    <div class="CardText">
+                    <div class="CardText reveal">
                         <p class="CardName">Bibingka</p>
-                        <p class="CardDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac vehicula risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut eu neque bibendum, euismod augue at, egestas eros. Aliquam tempus felis diam, vitae placerat nisl convallis eu. Donec ultrices, lacus eget sodales porta,</p>
+                        <p class="CardDesc">A traditional Filipino rice cake made from rice flour and coconut milk, typically baked in clay pots lined with banana leaves. Soft, slightly sweet, and often topped with butter, cheese, or salted egg, bibingka is commonly enjoyed during festive seasons and special gatherings.</p>
                     </div>
                 </div>
 
-                <div class="CardContainer">
+                <div class="CardContainer reveal">
                     <div class="Card">
                         <div class="CardInfo">
                             <h1>test</h1>
                         </div>
                     </div>
                     
-                    <div class="CardText">
+                    <div class="CardText reveal">
                         <p class="CardName">Pinais</p>
-                        <p class="CardDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac vehicula risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut eu neque bibendum, euismod augue at, egestas eros. Aliquam tempus felis diam, vitae placerat nisl convallis eu. Donec ultrices, lacus eget sodales porta,</p>
+                        <p class="CardDesc">A coastal delicacy made by wrapping rice, coconut milk, and sometimes fish or meat in banana leaves, then slow-cooking it over heat. The result is a fragrant, savory dish where the natural aroma of banana leaves enhances its rich, comforting flavor.</p>
                     </div>
                 </div>
 
-                <div class="CardContainer">
+                <div class="CardContainer reveal">
                     <div class="Card">
                         <div class="CardInfo">
                             <h1>test</h1>
                         </div>
                     </div>
                     
-                    <div class="CardText">
+                    <div class="CardText reveal" >
                         <p class="CardName">Puto sa Bagoe</p>
-                        <p class="CardDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac vehicula risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut eu neque bibendum, euismod augue at, egestas eros. Aliquam tempus felis diam, vitae placerat nisl convallis eu. Donec ultrices, lacus eget sodales porta,</p>
+                        <p class="CardDesc">A soft, steamed rice cake variation known for its fluffy texture and subtle sweetness. “Sa Bagoe” refers to its local style of preparation, often using traditional molds and serving methods, making it a simple yet nostalgic Filipino snack.</p>
                     </div>
                 </div>
  
-                <div class="CardContainer">
+                <div class="CardContainer reveal">
                     <div class="Card">
                         <div class="CardInfo">
                             <h1>test</h1>
                         </div>
                     </div>
                     
-                    <div class="CardText">
+                    <div class="CardText reveal">
                         <p class="CardName">Huwad - Huwad</p>
-                        <p class="CardDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac vehicula risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut eu neque bibendum, euismod augue at, egestas eros. Aliquam tempus felis diam, vitae placerat nisl convallis eu. Donec ultrices, lacus eget sodales porta,</p>
+                        <p class="CardDesc">A locally inspired delicacy or plant-based food item often associated with rural culinary traditions. It highlights natural ingredients and traditional preparation methods, reflecting the community’s connection to native plants and seasonal harvesting practices.</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="Border"></div>
-
         <!--FESTIVAL-->
         <div class="Festival" id="Festival">
+
+            <div class="FestivalWrapper">
+
              <div class="FestivalContent">
 
                 <div class="FestivalText">
-                    <h1 id="festTitle">Ati-Atihan <span id="SpanText">Municipal and Devotional Fiesta</span></h1>
-                    <p id="festDesc">Celebrated every January, the Ati-Atihan Festival of Ibajay is a vibrant expression of faith, culture, and unity. It brings the community to life with energetic performances, colorful traditions, and a deep connection to heritage.</p>
+                    <h1 id="festTitle" class="reveal">Ati-Atihan <span id="SpanText">Municipal and Devotional Fiesta</span></h1>
+                    <p id="festDesc" class="reveal">Celebrated every January, the Ati-Atihan Festival of Ibajay is a vibrant expression of faith, culture, and unity. It brings the community to life with energetic performances, colorful traditions, and a deep connection to heritage.</p>
                 </div>
 
-                <div class="Timeline">
+                <div class="Timeline reveal">
 
                     <div class="Step active" data-index="0">
                         <span class="StepDesc">Street Dancing Competitions</span>
@@ -383,18 +413,23 @@
                 </div>
 
             </div>
-                <div class="FestivalImage" id="festImage">            
-                    <div class="label">
+                <div class="FestivalImage reveal" id="festImage">            
+                    <div class="label reveal">
                         <h1>January • Every Year</h1>
                     </div>
+                </div>
+
                 </div>
         </div>
 
         <!--HISTORY-->
         <div class="History" id="History">
+
+            <div class="HistoryWrapper">
+
              <div class="HistoryContent">
 
-                <div class="HistoryText">
+                <div class="HistoryText reveal">
                     <h1 id="histTitle">History</h1>
                     <p id="histDesc">Originally one of the earliest settlements in Aklan, Ibajay traces its roots to pre-colonial times when it thrived as a coastal community rich in natural resources. It became an organized town under Spanish rule around 1673, gradually developing into a center of agriculture, trade, and local governance. Over time, parts of its territory, including Nabas, were separated to form independent municipalities as the population and economy expanded.</p>
                     <br/>
@@ -405,43 +440,46 @@
                     <p id="histDesc">Historically, Ibajay has been a hub of traditional craftsmanship. Local industries such as nito weaving, abaca fiber production, and pottery have been passed down through generations, producing handmade goods that reflect both functionality and artistry. These products remain an important part of the local economy and cultural identity.</p>
                     <br/>
                     <p id="histDesc">
-Today, Ibajay stands as a municipality that balances heritage and progress—preserving its traditions while embracing development. Known for its warm community, cultural richness, and natural beauty, it continues to live up to its identity as a “Paradise in Seclusion.”</p>
+                    Today, Ibajay stands as a municipality that balances heritage and progress—preserving its traditions while embracing development. Known for its warm community, cultural richness, and natural beauty, it continues to live up to its identity as a “Paradise in Seclusion.”</p>
                 </div>
 
             </div>
 
-            <div class="HistoryImage" id="histImage">            
-                <div class="HistoryLabel">
-                    <h1>January</h1>
+            <div class="HistoryImage reveal" id="histImage">            
+                <div class="HistoryLabel reveal">
+                    <h1>Established in 1673</h1>
                 </div>
             </div>
-            
+
+            </div>
         </div>
 
         <!--ABOUTUS-->
         <div class="AboutUs" id="AboutUs">
-            <h1>Avicennia Y Bayjay</h1>
+            <h1 class="reveal">Avicennia Y Bayjay</h1>
             <div id="AboutUsGrid">
-                <div class="AboutLeft">
-                    <img src="group.jpg" />
+                <div class="AboutLeft reveal">
+                    <img src="groupic.jpg" id="AboutUsImg" />
                 </div>
 
                 <div id="AboutUsGridWrapper">
-                    <div class="AboutTabs">
-                        <button class="tab active" data-tab="team">Our Team</button>
+                    <div class="AboutTabs reveal">
+                        <button class="tab active " data-tab="team">Our Team</button>
                         <button class="tab" data-tab="expo">School Expo</button>
                     </div>
 
                     <div class="AboutContent">
-                        <div class="AboutRight">
+                        <div class="AboutRight reveal">
                             <div class="tab-content active" id="team">
                                 <h2>About Us</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla interdum lobortis magna, maximus tempor odio commodo ac. Curabitur bibendum, sem a feugiat congue, orci ante facilisis purus, quis placerat tortor orci at lorem. In ut facilisis mi. Integer massa quam, elementum eget scelerisque eget, blandit sed dolor. Mauris quis erat a erat auctor accumsan vitae sit amet libero. Donec elementum nibh vitae leo porttitor sollicitudin. Aenean commodo neque eget erat pellentesque, at bibendum neque sodales.</p>
+                                <p>Welcome to Avicennia Y Bayjay — a culture-based food business inspired by the rich heritage, local flavors, and natural beauty of Ibajay, Aklan. From authentic delicacies to locally inspired drinks, we aim to give you a warm and meaningful taste of Ibajay’s culture. Rooted in tradition and creativity, our goal is to celebrate and promote the identity of Ibajay through affordable, high-quality, and memorable food experiences.</p>
                             </div>
 
                             <div class="tab-content" id="expo">
                                 <h2>STI Kalibo School Exposition 2026</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla interdum lobortis magna, maximus tempor odio commodo ac. Curabitur bibendum, sem a feugiat congue, orci ante facilisis purus, quis placerat tortor orci at lorem. In ut facilisis mi. Integer massa quam, elementum eget scelerisque eget, blandit sed dolor. Mauris quis erat a erat auctor accumsan vitae sit amet libero. Donec elementum nibh vitae leo porttitor sollicitudin. Aenean commodo neque eget erat pellentesque, at bibendum neque sodales.</p>
+                                <p>Join us at the 2026 Exposition and experience the culture, flavors, and creativity of Ibajay, Aklan. Open to tourists, locals, students, and educators, this event brings the heart of Ibajay to STI College Kalibo through a thoughtfully curated showcase of its identity and heritage.
+
+                                Discover authentic Ibajay cuisine, explore locally made woven crafts and pottery, and witness a live cultural dance presentation that highlights the energy, artistry, and traditions of the community. This exposition celebrates the rich culture, creativity, and pride of Ibajay.</p>
                             </div>
                         </div>
                     </div>
@@ -453,33 +491,45 @@ Today, Ibajay stands as a municipality that balances heritage and progress—pre
             <div id="footerwrap">
 
                 <img id="FooterLogo" src="logo.png" alt="logo"/> 
-                <div id="FooterSlogans">
-                    <p id="Slogan">"Nagahiusa nga Bakhawan, Dungog it Ibajay"</p>                    
+
+                <hr/>
+
+                <div id="FooterText">
+                    <div id="FooterSlogans">
+                        <p id="Slogan">
+                            "Nagahiusa nga Bakhawan, Dungog it Ibajay"
+                        </p>
+                    </div>
+                
+                    <p id="FooterAbout">
+                        A cultural showcase of Ibajay’s heritage, festivals,
+                        and destinations, created to highlight the beauty
+                        and traditions of our hometown.
+                    </p>
                 </div>
 
                 <hr/>
 
-                <div class="fContentWrap">               
-                    <a id="footerFB" href="https://www.facebook.com/people/Pradise-Seclu/pfbid02jttiJCLVeE8CgDhnBehp43pA77VgqimBCEg5mrGC1hw91eMUoeSQc1aY3xnMiACCl/" target="_blank">
-                        <img id="fblogo" src="whitefb_bg.png" alt="Facebook"/>  
-                        <p>Avicennia Y Bayjay</p>
-                    </a>
+                <div id="Contacts">
+                    <p>Contact us at:</p>
+                    <div class="fContentWrap">               
+                        <a id="footerFB" href="https://www.facebook.com/people/Pradise-Seclu/pfbid02jttiJCLVeE8CgDhnBehp43pA77VgqimBCEg5mrGC1hw91eMUoeSQc1aY3xnMiACCl/" target="_blank">
+                            <img id="fblogo" src="whitefb_bg.png" alt="Facebook"/>  
+                            <p>Avicennia Y Bayjay</p>
+                        </a>
+                    </div>
+
+                    <div class="fContentWrap">          
+                        <a id="footerEmail" href="mailto:avicenniaybayjay@gmail.com" 
+                        onclick="if(window.innerWidth > 768){ 
+                                        window.open('https://mail.google.com/mail/?view=cm&fs=1&to=avicenniaybayjay@gmail.com'); 
+                                        return false;
+                                    }">
+                            <img id="emaillogo" src="emailf.png" alt="Facebook"/>         
+                            <p>avicenniaybayjay@gmail.com</p>
+                        </a>
+                    </div>
                 </div>
-
-                <div class="fContentWrap">          
-                    <a id="footerEmail" href="mailto:avicenniaybayjay@gmail.com" 
-                    onclick="if(window.innerWidth > 768){ 
-                                    window.open('https://mail.google.com/mail/?view=cm&fs=1&to=avicenniaybayjay@gmail.com'); 
-                                    return false;
-                                }">
-                        <img id="emaillogo" src="emailf.png" alt="Facebook"/>         
-                        <p>avicenniaybayjay@gmail.com</p>
-                    </a>
-                </div>
-
-                <hr/>
-
-                <p>A cultural showcase of Ibajay’s heritage, festivals, and destinations, created to highlight the beauty and traditions of our hometown.</p>
             </div>
 
             <div id="FFooter">
@@ -493,6 +543,7 @@ Today, Ibajay stands as a municipality that balances heritage and progress—pre
         
     <div id="Overlay"></div> <!--always at bottom-->
     <script src="content.js"></script>
+    <script src="destinations.js"></script>
     <script src="navbar.js"></script>
     <script src="Splash.js"></script>
     <script src="ImageCards.js"></script>

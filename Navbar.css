@@ -4,7 +4,7 @@
 }
 
 :root {
-    --BGColor: #172501;
+    --BGColor: #1f3004;
 }
 
 #loader {
@@ -57,10 +57,12 @@
     z-index: 999;
 }
 
-#logodesk {
-    width: 5rem;
-    height: auto;
-    cursor: pointer;
+#logodesk { 
+    width: 5.5rem; 
+    height: auto; 
+    transform: translate(-15%, 9%); 
+    margin-right: 2rem; 
+    cursor: pointer; 
 }
 
 #HorizontalWrapper {
@@ -117,11 +119,11 @@
 
 #logo {
     position: absolute;
-    left: 1rem;
+    left: 6.5%;
     top: 50%;
-    transform: translateY(-50%);
-    width: 3.5rem;
-    height: 3.5rem;
+    transform: translateY(-30%);
+    width: 4rem;
+    height: 4rem;
     cursor: pointer;
 }
 
@@ -150,12 +152,17 @@
     transition: all 0.4s ease;
 }
 
+.static.scrolled {
+    background: rgba(15, 39, 19, 0.829); 
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
 #SideBar {
     position: fixed;
     top: 0;
     right: 0;
     width: 100%;
-    height: 100vh;
+    height: 80vh;
 
     background: white;
     transform: translateX(100%);
@@ -212,7 +219,7 @@
 }
 
 footer {
-    background: var(--BGColor);
+    background: #0f2713;
     color: white;
     text-align: center;
 }
@@ -271,8 +278,38 @@ footer {
 }
 
 #FFooter {
-    background: black;
-    padding: 1rem;
+    background: #120A08;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.61);
+    padding: 1.4rem 1rem 5rem 1rem;
+}
+
+#Contacts {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    justify-content: center;
+    
+    gap: 0.8rem;
+
+    max-width: 400px;
+}
+
+#FooterText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    gap: 0.8rem;
+
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#FooterAbout {
+    line-height: 1.6;
+    opacity: 0.85;
 }
 
 @media (min-width: 900px) {

@@ -1,14 +1,20 @@
-const FestiveCard = document.querySelectorAll(".Card");
+const Card = document.querySelectorAll(".Card");
 const DisplayCard = document.getElementById("DisplayCard");
 const DisplayCardContainer = document.getElementById("ImageTapped");
-
+const AboutUsImg = document.getElementById("AboutUsImg");
 const BackBtn = document.getElementById("Back");
 
 BackBtn.addEventListener('click', function() { 
     DisplayCardContainer.classList.remove("Show"); 
 });
 
-FestiveCard.forEach(card => {
+AboutUsImg.addEventListener('click', function() { 
+    DisplayCard.style.backgroundImage = `url(${AboutUsImg.src})`;
+
+    DisplayCardContainer.classList.add("Show");
+});
+
+Card.forEach(card => {
     card.addEventListener('click', function() {
         const bg = window.getComputedStyle(card).backgroundImage;
         DisplayCard.style.backgroundImage = bg;
