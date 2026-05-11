@@ -70,82 +70,88 @@ document.addEventListener("DOMContentLoaded", () => {
     const data = {
         weaving: {
             img: "images/Weaving1.jpg",
-            headimg: "images/Weaving2.jpg",
+            label: "Woven Crafts of Ibajay",
             title: "Threads of Tradition",
             subtitle: "📍 Barangay Mabusao • Regador • San Jose, Ibajay, Aklan",
-            text1: "Weaving in Ibajay is a cultural practice shaped by generations of craftsmanship and tradition. Using nito vines and abaca fibers, artisans create functional and decorative products that reflect skill, patience, and creativity",
+            text1: "Weaving in Ibajay is a cultural practice shaped by generations of craftsmanship and tradition. Using nito vines and abaca fibers, artisans create functional and decorative products that reflect skill, patience, and creativity.",
             text2: "Rooted in local heritage, each woven piece highlights the community's connection to nature and sustainable living. The handcrafted works preserve traditional techniques while continuing to serve everyday use."
         },
-
         pottery: {
             img: "images/Pottery2.jpg",
-            headimg: "images/Pottery1.jpg",
+            label: "Earthcrafted Pottery",
             title: "Nature To Craft",
             subtitle: "📍 Barangay Coloncolong, Ibajay, Aklan",
-            text1: "From forest vines and plant fibers to hand-shaped clay, explore Ibajay’s rich tradition of nito, abaca, and pottery. Each creation embodies sustainability, heritage, and the skill of dedicated artisans.",
-            text2: "Rooted in Ibajay’s close relationship with its natural environment, local artisans turn raw materials like forest vines, plant fibers, and clay into meaningful creations. From nito weaving and abaca processing to handmade pottery, these crafts reflect a lifestyle shaped by sustainability, creativity, and respect for the land that sustains the community."
+            text1: "From forest vines and plant fibers to hand-shaped clay, explore Ibajay's rich tradition of nito, abaca, and pottery. Each creation embodies sustainability, heritage, and the skill of dedicated artisans.",
+            text2: "Rooted in Ibajay's close relationship with its natural environment, local artisans turn raw materials into meaningful creations. From nito weaving and abaca processing to handmade pottery, these crafts reflect a lifestyle shaped by respect for the land."
         }
     };
 
-    function updateContent(type) {
+    let current = "weaving";
+    let transitioning = false;
 
+    const img       = document.getElementById("productImg");
+    const block     = document.getElementById("TextBlock");
+    const label     = document.getElementById("craftLabel");
+    const title     = document.getElementById("productTitle");
+    const subtitle  = document.getElementById("productSubTitle");
+    const text1     = document.getElementById("productText1");
+    const text2     = document.getElementById("productText2");
+    const buttons   = document.querySelectorAll(".TabButton");
+
+    function switchTab(type) {
+    if (type === current || transitioning) return;
+    transitioning = true;
+
+    buttons.forEach(b =>
+        b.classList.toggle("active", b.dataset.tab === type)
+    );
+
+    img.classList.add("fading");
+    block.classList.add("fading");
+
+    setTimeout(() => {
         const d = data[type];
 
-        const img = document.getElementById("productImg");
-        const headimg = document.getElementById("HeaderIMG");
-        const title = document.getElementById("productTitle");
-        const subtitle = document.getElementById("productSubTitle");
-        const text1 = document.getElementById("productText1");
-        const text2 = document.getElementById("productText2");
-
-        if (!img || !title || !text1 || !text2) {
-            console.warn("Missing HTML elements");
-            return;
-        }
-
-        img.src = d.img;
-        headimg.style.backgroundImage = `
-            linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-            url(${d.headimg})
-        `;
+        label.textContent = d.label;
         title.textContent = d.title;
         subtitle.textContent = d.subtitle;
         text1.textContent = d.text1;
         text2.textContent = d.text2;
-    }
 
-    const weavingTab = document.querySelector('[data-tab="weaving"]');
-    const potteryTab = document.querySelector('[data-tab="pottery"]');
+        // IMPORTANT: reset handlers first
+        img.onload = null;
+        img.onerror = null;
 
-    window.moveLeft = function () {
+        const finish = () => {
+            img.classList.remove("fading");
+            block.classList.remove("fading");
+            current = type;
+            transitioning = false;
+        };
 
-        const box = document.querySelector(".Weaving");
+        img.onload = finish;
+        img.onerror = finish;
 
-        box.classList.remove("slide-right");
-        box.classList.add("slide-left");
+        // force reload-safe swap
+        const newImg = new Image();
+        newImg.src = d.img;
 
-        setTimeout(() => {
-            updateContent("weaving");
-        }, 300);
+        newImg.onload = () => {
+            img.src = d.img;
+            finish();
+        };
 
-        potteryTab.classList.remove("active");
-        weavingTab.classList.add("active");
-    };
+        newImg.onerror = finish;
 
-    window.moveRight = function () {
+        // fallback safety (prevents lock)
+        setTimeout(finish, 800);
 
-        const box = document.querySelector(".Weaving");
+    }, 320);
+}
 
-        box.classList.remove("slide-left");
-        box.classList.add("slide-right");
-
-        setTimeout(() => {
-            updateContent("pottery");
-        }, 300);
-
-        weavingTab.classList.remove("active");
-        potteryTab.classList.add("active");
-    };
+    window.switchTab  = switchTab;
+    window.moveLeft   = () => switchTab("weaving");
+    window.moveRight  = () => switchTab("pottery");
 
 });
 
