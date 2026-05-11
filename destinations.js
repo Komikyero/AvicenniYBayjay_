@@ -90,8 +90,22 @@ mapsBtn.addEventListener("click", (e) => {
     console.log("Maps button href:", mapsBtn.href);
 });
 
+function getCardWidth() {
+    if (!cards[0]) return 160;
+    const style = window.getComputedStyle(cards[0]);
+    const gap = parseFloat(style.marginRight) || 0;
+    // read the track's gap from computed style
+    const trackGap = parseFloat(window.getComputedStyle(track).gap) || clampedGap();
+    return cards[0].offsetWidth + trackGap;
+}
+
+function clampedGap() {
+    // mirrors the CSS clamp(10px, 2vw, 20px)
+    return Math.min(20, Math.max(10, window.innerWidth * 0.02));
+}
+
 function centerOnIndex(index, animate = true) {
-    const cardWidth = cards[0].offsetWidth + 20;
+    const cardWidth = getCardWidth();   // <-- live measurement
 
     const move =
         (carousel.offsetWidth / 2) -
@@ -102,11 +116,18 @@ function centerOnIndex(index, animate = true) {
         : "none";
 
     track.style.transform = `translateX(${move}px)`;
-
     currentTranslate = move;
 
     setActive(index);
 }
+
+let resizeTimer;
+window.addEventListener("resize", () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+        centerOnIndex(activeIndex, false);
+    }, 100);
+});
 
 function handleLoop() {
     const len = originalCards.length;

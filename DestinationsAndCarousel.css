@@ -52,6 +52,36 @@
     padding: 1rem;
 }
 
+#InfoEyebrow {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.55);
+    margin-bottom: 0.5rem;
+
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding-bottom: clamp(10px, 0.5vw, 20px);
+}
+
+#InfoEyebrow::before,
+#InfoEyebrow::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.35);
+}
+
+#CardDescription {
+    margin: 1.1rem 1.4rem 0.5rem;
+    font-size: 0.88rem;
+    line-height: 1.7;
+    color: rgba(58,22,0,0.75);
+}
+
 #InfoTitle {
     font-size: 2.3rem;
     line-height: 1;
@@ -133,6 +163,22 @@
     z-index: 11;
 }
 
+.DTextWrapper h3 {
+    margin: 0 0 0.18rem;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(58,22,0,0.45);
+}
+
+.DTextWrapper p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--TextColorDark);
+    line-height: 1.45;
+}
+
 #ImageContainer h1, 
 #ImageContainer h3, 
 #ImageContainer p{
@@ -145,73 +191,76 @@
     gap: 0.5rem;
 }
 
-.Dcard {
-    width: 10rem;
-    height: 13rem;
-    border-radius: 1rem;
 
+.Dcard {
+    width: clamp(9rem, 28vw, 12rem);
+    height: clamp(12rem, 40vw, 16rem);
+    border-radius: 1rem;
     background-size: cover;
     background-position: center;
-
     opacity: 0.6;
-    transform: scale(0.9);
-    transition: 0.3s;
     cursor: pointer;
-    box-shadow: 
-    0 3px 10px rgba(0, 0, 0, 0.12),
-    0 10px 25px rgba(0, 0, 0, 0.18);
-    transition: transform 0.3s ease;
-
-    transform: translateY(calc(var(--depth) * 20px)) 
-            scale(calc(1 - var(--depth) * 0.10));
-
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.12),
+        0 10px 25px rgba(0, 0, 0, 0.18);
+    transform: translateY(calc(var(--depth) * 16px))
+               scale(calc(1 - var(--depth) * 0.10));
+    transition: transform 0.3s ease, opacity 0.3s ease;
     pointer-events: auto;
     position: relative;
     z-index: 20;
-
-}
-
-.Dcard.active:hover {
-    animation-play-state: running;
+    flex-shrink: 0;      
 }
 
 .locationInfoWrap {
     display: flex;
-    flex-direction: row;
-    align-items: center; 
-    gap: 0.5rem;
-    margin-left: 5%;
+    align-items: flex-start;
+    gap: 0.85rem;
+    padding: 0.85rem 1.4rem;
+    border-bottom: 1px solid rgba(58,22,0,0.07);
 }
 
+.locationInfoWrap:last-child { border-bottom: none; }
+
 .LocationLogo {
-    width: 40px;
-    height: 40px;
-    border: 1px solid red;
+    width: 36px; height: 36px;
+    border-radius: 0.6rem;
+    background: rgba(58,22,0,0.07);
+    border: none;
+    object-fit: contain;
+    padding: 6px;
+    box-sizing: border-box;
+    flex-shrink: 0;
 }
 
 #DestinationCardLabel {
-    width: fit-content;
-
-    padding: 0.45rem 1rem;
-
+    display: inline-block;
+    margin: 1.1rem 1.4rem 0.4rem;
+    padding: 0.3rem 0.9rem;
     border-radius: 999px;
-
-    background: #556B2F;
-    color: white;
-
-    font-size: clamp(0.7rem, 1.5vw, 0.9rem);
-    font-weight: 600;
-    letter-spacing: 0.08em;
+    background: #3b5a1c;
+    color: #d4e8a8;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-
     font-family: var(--main-font);
+}
 
-    box-shadow:
-    0 3px 8px rgba(0,0,0,0.15);
+#DestinationCardName {
+    margin: 0 1.4rem 0.1rem;
+    font-size: 1.7rem;
+    line-height: 1.15;
+    color: var(--Primary-Color);
+    font-family: var(--header-font);
+}
 
-    transition: 0.3s ease;
-    
-    cursor: none;
+#LocationWrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0 0;
+    border-top: 1px solid rgba(58,22,0,0.1);
+    border-bottom: 1px solid rgba(58,22,0,0.1);
 }
 
 #DestinationCardLabel:hover {
@@ -220,205 +269,124 @@
 }
 
 .DirectionsBtn {
-    width: 90%;
-
     display: flex;
     align-items: center;
-    justify-content: center; 
-    text-align: center;
-    padding: 0.9rem 1.2rem;
-
-    margin: 1.2rem;
-
-    margin: 0 auto;
-    border-radius: 1rem;
-    
+    justify-content: center;
+    gap: 0.55rem;
+    margin: 0.8rem 1.4rem 1.4rem;
+    padding: 0.85rem 1.4rem;
+    border-radius: 0.9rem;
+    background: var(--TextColorDark);
+    color: var(--TextColorLight);
     text-decoration: none;
-
-    background: linear-gradient(
-        135deg,
-        #4f3d2f,
-        #6b4a2f
-    );
-
-    color: white;
-
     font-family: var(--main-font);
-    font-size: clamp(0.9rem, 2vw, 1rem);
+    font-size: 0.92rem;
     font-weight: 600;
-    letter-spacing: 0.04em;
-
-    box-shadow:
-    0 6px 16px rgba(0,0,0,0.18);
-
-    transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    opacity 0.25s ease;
+    letter-spacing: 0.03em;
+    transition: background 0.2s ease, transform 0.2s ease;
 }
 
-.DirectionsBtn:hover {
-    transform: translateY(-3px);
-
-    box-shadow:
-    0 10px 22px rgba(0,0,0,0.22);
-}
-
-.DirectionsBtn:active {
-    transform: scale(0.98);
-}
-
-.DirectionsBtn img {
-    width: 1.1rem;
-    height: 1.1rem;
-}
-
-@keyframes bop {
-    0%, 100% { transform: scale(1.1) translateY(-1.2rem); }
-    50%  { transform: scale(1.1) translateY(-8px); }
-}
+.DirectionsBtn:hover { background: var(--Primary-Color); transform: translateY(-2px); }
+.DirectionsBtn:active { transform: scale(0.98); }
+.DirectionsBtn img { width: 1rem; height: 1rem; opacity: 0.85; }
 
 .Dcard.active {
     opacity: 1;
-    transform: scale(1.1) translateY(-1.2rem);
-    animation: bop 0.9s ease-in-out infinite;
-    animation-play-state: paused;
+    transition: transform 0.3s ease-in-out;
+
 }
+
+.Dcard.active:hover {
+    transform: scale(1.08) translateY(-1rem);
+}
+
 
 #DestinationTapped {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    border: 1px solid red;
-    box-shadow: 
-    0 3px 10px rgba(0, 0, 0, 0.12),
-    0 10px 25px rgba(0, 0, 0, 0.18);
-    background-color: rgba(8, 8, 8, 0.548);
+    top: 0; left: 0;
+    width: 100%; height: 100vh;
+    background: rgba(7, 20, 5, 0.836);
     backdrop-filter: blur(3px);
-
+    -webkit-backdrop-filter: blur(3px);
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-
     opacity: 0;
     pointer-events: none;
-    transition: 0.3s ease;
-
+    transition: opacity 0.3s ease;
     z-index: 2000;
+    padding: 1.5rem;
+    box-sizing: border-box;
 }
 
-#DestinationTapped.Show {
-    opacity: 1;
-    pointer-events: auto;
-}
-
-#DestinationTapped.Hide {
-    opacity: 0;
-    pointer-events: none;
-}
+#DestinationTapped.Show { opacity: 1; pointer-events: auto; }
+#DestinationTapped.Hide  { opacity: 0; pointer-events: none; }
 
 #DDisplayCard {
-    width: 90%;
-    max-width: 1000px;
-    height: 80vh;
-    border: 1px solid blue;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    border-radius: 1rem;
-
-    background-color: var(--ContentBG);
-
-    overflow: visible;
-
+    width: 100%;
+    max-width: 480px;
+    background: var(--ContentBG);
+    border-radius: 1.5rem;
+    overflow: hidden;
     position: relative;
-    z-index: 10;
+    box-shadow:
+        0 24px 60px rgba(0,0,0,0.4),
+        0 6px 16px rgba(0,0,0,0.2);
 }
 
 #DScrollContent {
-    height: 100%;
+    max-height: 82vh;
     overflow-y: auto;
     overflow-x: hidden;
-    padding-bottom: 2rem;
-    border-radius: 1rem;
 }
 
-#DScrollContent::-webkit-scrollbar {
-    width: 5px;
-}
-
+#DScrollContent::-webkit-scrollbar { width: 4px; }
+#DScrollContent::-webkit-scrollbar-track { background: transparent; }
 #DScrollContent::-webkit-scrollbar-thumb {
-    background: rgba(0,0,0,0.3);
+    background: rgba(58,22,0,0.2);
     border-radius: 999px;
 }
 
 #DisplayCardBG {
-    width: 90%;
-    height: clamp(10rem, 15vw, 18rem);
-    box-shadow: 
-    0 10px 25px rgba(0, 0, 0, 0.18);
-    background-color: red;
-
+    width: 100%;
+    height: 220px;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-
-    border-radius: 0.5rem;
-
-    margin: 1rem auto;
-
-    position: relative;
-    z-index: 10;
+    flex-shrink: 0;
 }
 
 #DBack {
     position: absolute;
-    top: -15px;
-    right: -5px;
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    box-shadow: 
-    0 3px 10px rgba(0, 0, 0, 0.12),
-    0 10px 25px rgba(0, 0, 0, 0.18);
+    top: 14px; right: 14px;
+    width: 36px; height: 36px;
+    background: rgba(25,15,5,0.65);
+    backdrop-filter: blur(6px);
+    color: #FFF7E0;
+    border: 1.5px solid rgba(255,247,224,0.25);
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    color: #F7F0ED;
-    font-weight: bolder;
-
-    background-color: #321D16;
-
-    border: none;
-    outline: none;
-
-    border-radius: 50%;
-
+    font-size: 1rem;
     cursor: pointer;
-    font-size: 1.2rem;
-
-    z-index: 2100;
-
-    transition: transform 0.3s ease;
+    z-index: 20;
+    transition: background 0.2s ease, transform 0.2s ease;
 }
 
-#DBack:hover {
-    transform: scale(1.2);
-}
+#DBack:hover { background: rgba(37,15,2,0.9); transform: scale(1.1); }
 
 #LocationWrapper p {
     padding:0.5rem 0 0.5rem 0;
 }
 
 @media (min-width: 600px) {
-    .Dcard {
-        width: 14rem;
-        height: 20rem;
+.Dcard {
+        width: clamp(10rem, 18vw, 14rem);
+        height: clamp(13rem, 26vw, 20rem);
+    }
+
+    .DCarousel {
+        min-height: 220px;
     }
 
     #InfoTitle {
@@ -429,7 +397,10 @@
 }
 
 @media (min-width: 900px) {
-
+  .Dcard {
+        width: clamp(12rem, 15vw, 16rem);
+        height: clamp(16rem, 22vw, 22rem);
+    }
 }
 
 @media (min-width: 1200px) {

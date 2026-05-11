@@ -1,0 +1,297 @@
+.History {
+    width: 100%;
+
+    background-color: #E8D1A7;
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 6rem 0;
+}
+
+.History::after {
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+    height: 400px;
+
+    background:
+    radial-gradient(
+        rgba(85, 107, 79, 0.12),
+        transparent 70%
+    );
+
+    bottom: -150px;
+    left: -120px;
+
+    z-index: 1;
+}
+
+.HistoryWrapper {
+    width: min(1400px, 92%);
+
+    margin-inline: auto;
+
+    display: grid;
+    grid-template-columns: 1fr;
+
+    gap: 3rem;
+
+    position: relative;
+
+    z-index: 5;
+}
+
+.HistoryImage {
+    position: relative;
+
+    width: 100%;
+    min-height: 420px;
+
+    border-radius: 2rem;
+
+    overflow: hidden;
+
+    background-image:
+    linear-gradient(
+        to top,
+        rgba(0,0,0,0.65),
+        rgba(0,0,0,0.15)
+    ),
+    url(images/TestIMG2.jpg);
+
+    background-size: cover;
+    background-position: center;
+
+    box-shadow:
+    0 25px 60px rgba(68, 45, 28, 0.25);
+
+    isolation: isolate;
+}
+
+.HistoryImage::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 18px;
+
+    border: 1px solid rgba(255,255,255,0.35);
+
+    border-radius: 1.5rem;
+
+    z-index: 2;
+}
+
+.HistoryLabel {
+    position: absolute;
+
+    bottom: 1rem;
+    left: 1rem;
+
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+
+    padding: 0.7rem 1rem;
+
+    border-radius: 1rem;
+
+    background:
+        linear-gradient(
+            135deg,
+            #3F4B35 0%,
+            #324721 100%
+        );
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    color: var(--TextColorLight);
+
+    font-size: 0.9rem;
+    font-family: var(--header-font);
+    letter-spacing: 0.03em;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.22),
+        0 3px 10px rgba(0,0,0,0.12);
+
+    z-index: 10;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.HistoryLabel::before {
+    content: "";
+
+    width: 20px;
+    height: 2px;
+
+    border-radius: 999px;
+
+    background: #E8D1A7;
+
+    opacity: 0.9;
+
+    flex-shrink: 0;
+}
+
+.HistoryLabel::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(255,255,255,0.08),
+            transparent
+        );
+
+    pointer-events: none;
+}
+
+.HistoryImage:hover .HistoryLabel {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 14px 30px rgba(0,0,0,0.28),
+        0 6px 16px rgba(0,0,0,0.16);
+}
+
+.HistoryLabel p {
+    font-size: 1rem;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+
+    margin: 0;
+}
+
+.HistoryText {
+    position: relative;
+
+    background:
+    rgba(255, 251, 241, 0.884);
+
+    backdrop-filter: blur(12px);
+
+    border:
+    1px solid rgba(255,255,255,0.35);
+
+    border-radius: 2rem;
+
+    padding: 2rem;
+
+    box-shadow:
+    0 15px 40px rgba(68, 45, 28, 0.08);
+}
+
+#histTitle {
+    font-size: clamp(2.5rem, 5vw, 5rem);
+
+    color: var(--Cowhide-Cocoa);
+
+    line-height: 0.95;
+
+    margin-bottom: 2rem;
+
+    font-family: 'Times New Roman', serif;
+
+    position: relative;
+}
+
+#histTitle::after {
+    content: "";
+
+    display: block;
+
+    width: 100px;
+    height: 4px;
+
+    border-radius: 999px;
+
+    margin-top: 1rem;
+
+    background:
+    linear-gradient(
+        to right,
+        var(--Caramel),
+        var(--Forest-Green)
+    );
+}
+
+#histDesc {
+    font-size: 1rem;
+
+    line-height: 2;
+
+    color: var(--TextDark);
+
+    opacity: 0.9;
+}
+
+@media (min-width: 768px) {
+
+    .History {
+        padding: 8rem 0;
+    }
+
+    .HistoryText {
+        padding: 3rem;
+    }
+
+    #histDesc {
+        font-size: 1.05rem;
+    }
+
+    .HistoryImage {
+        min-height: 520px;
+    }
+}
+
+@media (min-width: 1100px) {
+
+    .HistoryWrapper {
+        grid-template-columns: 0.95fr 1.05fr;
+
+        align-items: center;
+
+        gap: 5rem;
+    }
+
+    .HistoryImage {
+        height: 85vh;
+
+        min-height: 750px;
+
+        position: sticky;
+
+        top: 100px;
+    }
+
+    .HistoryText {
+        padding: 4rem;
+
+        transform: translateX(-60px);
+    }
+}
+
+@media (min-width: 1500px) {
+    .HistoryText {
+        padding: 5rem;
+    }
+
+    #histDesc {
+        font-size: 1.1rem;
+    }
+}
