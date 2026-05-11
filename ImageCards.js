@@ -32,11 +32,11 @@ const BackBtn = document.getElementById("DBack");
 
 BackBtn.addEventListener('click', function() { 
     displayWrapper.classList.remove("Show"); 
+    document.body.classList.remove("modal-open");
 });
 
 learnMoreBtn.addEventListener("click", (e) => {
     e.preventDefault();
-
     const activeCard = document.querySelector(".Dcard.active");
 
     if (!activeCard) return;
@@ -46,6 +46,7 @@ learnMoreBtn.addEventListener("click", (e) => {
     Header.style.backgroundImage = `url(${img})`;
 
     displayWrapper.classList.add("Show");
+    document.body.classList.add("modal-open");
 });
 
 });

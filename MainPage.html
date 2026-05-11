@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="DestinationsAndCarousel.css"/>
         <link rel="stylesheet" href="Festivall.css"/>
         <link rel="stylesheet" href="AboutUs.css"/>
+        <link rel="stylesheet" href="History.css"/>
 
         <!--font backups-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -121,7 +122,7 @@
                     <ul data-slides>
                         <li class="slide" data-active>    
                             <video loop autoplay muted playsinline>
-                                <source src="https://res.cloudinary.com/dltdjydbk/video/upload/Background_gjfiyi.mp4" type="video/mp4">
+                                <source src="Background.mp4" type="video/mp4">
                             </video></li>
                         <li class="slide"><img src="images/DJI_0203.jpg"></li>
                         <li class="slide"><img src="images/387145350_144651095396296_7959629525284625735_n.jpg"></li>
@@ -135,7 +136,7 @@
             </section>
 
             <div id="HeroText" class="ContentContainer">
-             <p>Paradise in Seclusion</p>
+             <p id="Tag">Paradise in Seclusion</p>
              <h1>Ibajay</h1>
 
             <hr>
@@ -154,6 +155,7 @@
             <div id="DestBG"></div>
             
             <div id="InfoWrap" class="reveal">
+                <p id="InfoEyebrow">Discover Ibajay</p>
                 <h1 id="InfoTitle">T</h1>
                 <p id="InfoText">
                     T
@@ -330,37 +332,39 @@
         </div>
         
         <!--PRODUCTS-->
-        <div class="Weaving" id="Products">
+<div class="Weaving" id="Products">
 
-            <img id="productImg" src="images/Weaving1.jpg" class="SideImg reveal">
+    <div class="SideImgWrap">
+        <img id="productImg" src="images/Weaving1.jpg" class="reveal" alt="Craft image">
+        <div class="ImgOverlay"></div>
+    </div>
 
-            <div id="WContentBox" class="Contentbox">
-                <div class="CVerticalWrapper">
-                    <div class="ItemContainer" id="WText">
-
-                        <div class="SmallImg reveal" id="HeaderIMG">
-                            <div id="HeaderVertWrap">
-                                <h1 id="productTitle">Threads of Tradition</h1>
-                                <p id="productSubTitle">📍 Barangay Mabusao • Regador • San Jose, Ibajay, Aklan</p>
-                            </div>
-                        </div>
-
-                        <div class="TabButtons reveal">
-                            <button onclick="moveLeft()" class="TabButton active" data-tab="weaving">Weaving</button>
-                            <button onclick="moveRight()" class="TabButton" data-tab="pottery">Pottery</button>
-                        </div>
-                        <div id="TextContent">
-                            <p id="productText1" class="reveal">Weaving in Ibajay is a cultural practice shaped by generations of craftsmanship and tradition. Using nito vines and abaca fibers, artisans create functional and decorative products that reflect skill, patience, and creativity</p>
-                            <p id="productText2" class="reveal">Rooted in local heritage, each woven piece highlights the community's connection to nature and sustainable living. The handcrafted works preserve traditional techniques while continuing to serve everyday use.</p>
-                        </div>
-                    </div>  
-                </div>
-            </div>
-
+    <div id="WContentBox" class="Contentbox">
+        <div class="TabButtons reveal">
+            <button class="TabButton active" data-tab="weaving" onclick="switchTab('weaving')">Weaving</button>
+            <button class="TabButton" data-tab="pottery" onclick="switchTab('pottery')">Pottery</button>
         </div>
 
-        <div class="Products">
+        <div class="TextBlock reveal" id="TextBlock">
+            <span class="CraftLabel" id="craftLabel">Woven Crafts of Ibajay</span>
+            <h1 id="productTitle">Threads of Tradition</h1>
+            <p id="productSubTitle">📍 Barangay Mabusao • Regador • San Jose, Ibajay, Aklan</p>
+            <div class="Divider"></div>
+            <div id="TextContent">
+                <p id="productText1">Weaving in Ibajay is a cultural practice shaped by generations of craftsmanship and tradition. Using nito vines and abaca fibers, artisans create functional and decorative products that reflect skill, patience, and creativity.</p>
+                <p id="productText2">Rooted in local heritage, each woven piece highlights the community's connection to nature and sustainable living. The handcrafted works preserve traditional techniques while continuing to serve everyday use.</p>
+            </div>
+        </div>
+    </div>
 
+</div>
+
+        <div class="Products">
+            <div id="ProductsHeader" class="reveal">
+                <p id="ProductsEyebrow">Taste of Ibajay</p>
+                <h1 id="ProductsTitle">Local Delicacies</h1>
+            </div>
+            
              <div id="CardGrid">
                 <!--basta gumagana-->
                 <div class="CardContainer reveal">
@@ -421,11 +425,15 @@
         <div class="Festival" id="Festival">
 
             <div class="FestivalWrapper">
-
+                <div class="FestivalImage reveal" id="festImage">            
+                    <div class="label reveal">
+                        <p>January • Every Year</p>
+                    </div>
+                </div>
              <div class="FestivalContent">
 
                 <div class="FestivalText">
-                    <h1 id="festTitle" class="reveal">Ati-Atihan <span id="SpanText">Municipal and Devotional Fiesta</span></h1>
+                    <h1 id="festTitle" class="reveal">Ati-Ati <span id="SpanText">Municipal and Devotional Fiesta</span></h1>
                     <p id="festDesc" class="reveal">Celebrated every January, the Ati-Atihan Festival of Ibajay is a vibrant expression of faith, culture, and unity. It brings the community to life with energetic performances, colorful traditions, and a deep connection to heritage.</p>
                 </div>
 
@@ -454,34 +462,39 @@
                 </div>
 
             </div>
-                <div class="FestivalImage reveal" id="festImage">            
-                    <div class="label reveal">
-                        <p>January • Every Year</p>
-                    </div>
-                </div>
+               
 
                 </div>
         </div>
 
         <!--HISTORY-->
         <div class="History" id="History">
-
             <div class="HistoryWrapper">
-
                 <div class="HistoryText reveal">
                     <h1 id="histTitle">History</h1>
-                    <p id="histDesc">Originally one of the earliest settlements in Aklan, Ibajay traces its roots to pre-colonial times when it thrived as a coastal community rich in natural resources. It became an organized town under Spanish rule around 1673, gradually developing into a center of agriculture, trade, and local governance. Over time, parts of its territory, including Nabas, were separated to form independent municipalities as the population and economy expanded.</p>
-                    <br/>
-                    <p id="histDesc">Culturally, Ibajay shares in the vibrant spirit of the Ati-Atihan Festival, reflecting deep-rooted traditions of faith, unity, and celebration. The town continues to honor its heritage through local festivities and community gatherings that highlight the identity and resilience of its people.</p>
-                    <br/>
-                    <p id="histDesc">Ibajay is also known for its rich natural and cultural attractions, including the Katunggan it Ibajay, one of the largest mangrove eco-parks in the region, as well as scenic rivers, beaches, and upland landscapes. These destinations showcase the town’s commitment to environmental preservation and sustainable tourism.</p>
-                    <br/>
-                    <p id="histDesc">Historically, Ibajay has been a hub of traditional craftsmanship. Local industries such as nito weaving, abaca fiber production, and pottery have been passed down through generations, producing handmade goods that reflect both functionality and artistry. These products remain an important part of the local economy and cultural identity.</p>
-                    <br/>
                     <p id="histDesc">
-                    Today, Ibajay stands as a municipality that balances heritage and progress—preserving its traditions while embracing development. Known for its warm community, cultural richness, and natural beauty, it continues to live up to its identity as a “Paradise in Seclusion.”</p>
-                </div>
+                    Ibajay is one of the oldest settlements in the province of Aklan, with roots dating back to the pre-colonial period when early communities thrived along its rivers and coastal areas. The town became an organized municipality during the Spanish era around 1673, serving as an important center for agriculture, trade, and local governance in western Panay.
+                    </p>
 
+                    <br/>
+
+                    <p id="histDesc">
+                    Through the years, Ibajay expanded as neighboring communities developed, eventually leading to the creation of separate municipalities such as Nabas. Despite these changes, the town preserved its strong cultural identity shaped by faith, craftsmanship, and community traditions.
+                    </p>
+
+                    <br/>
+
+                    <p id="histDesc">
+                    Historically, Ibajay became known for traditional industries such as nito weaving, abaca fiber production, and pottery, crafts that were passed down through generations and remain part of the municipality’s cultural heritage today.
+                    </p>
+
+                    <br/>
+
+                    <p id="histDesc">
+                    Today, Ibajay continues to honor its history while embracing growth, standing as a municipality recognized for its heritage, natural landscapes, and enduring local traditions.
+                    </p>
+                </div>
+                
                 <div class="HistoryImage reveal" id="histImage">            
                     <div class="HistoryLabel reveal">
                         <p>Established in 1673</p>
