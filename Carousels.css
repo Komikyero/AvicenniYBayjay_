@@ -66,8 +66,8 @@
     top: 50%;
     transform: translateY(-50%);
 
-    width: 30px;
-    height: 30px;
+    width: clamp(25px, 3vw, 50px);
+    height: clamp(25px, 3vw, 50px);
 
     display: flex;
     align-items: center;
@@ -76,9 +76,9 @@
     border: none;
     border-radius: 50%;
 
-    background-color: rgba(27, 0, 0, 0.39);
+    background-color: rgba(8, 22, 11, 0.39);
     color: rgba(255, 255, 255, 0.411);
-    font-size: 1rem;
+    font-size: clamp(1rem, 1.5vw, 2rem);
     font-weight: bolder;
 
     cursor: pointer;
@@ -88,7 +88,7 @@
 
 .carousel-button:hover{
     color: white;
-    background-color: rgba(129, 3, 3, 0.74);
+    background-color: rgba(15, 39, 19, 0.74);
 }
 
 .carousel-button.prev {

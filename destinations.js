@@ -8,18 +8,20 @@ const carousel = document.querySelector(".DCarousel");
 const CardTappedName = document.getElementById("DestinationCardName");
 const CardTappedLabel = document.getElementById("DestinationCardLabel");
 const CardTappedDesc = document.getElementById("CardDescription");
+const CardLocation = document.getElementById("BrgyText");
+const CardDistance = document.getElementById("DistanceText");
+
 let cards = document.querySelectorAll(".Dcard");
 
 const originalCards = [...cards];
 const originals = [...cards];
 let activeIndex = originalCards.length;
-/* prepend clones */
+
 [...originals].reverse().forEach(card => {
     const clone = card.cloneNode(true);
     track.insertBefore(clone, track.firstChild);
 });
 
-/* append clones */
 originals.forEach(card => {
     const clone = card.cloneNode(true);
     track.appendChild(clone);
@@ -64,6 +66,8 @@ function setActive(index) {
     CardTappedName.textContent = realCard.dataset.title;
     CardTappedLabel.textContent = realCard.dataset.label;
     CardTappedDesc.textContent = realCard.dataset.carddesc;
+    CardLocation.textContent = realCard.dataset.brgy;
+    CardDistance.textContent = realCard.dataset.distance;
 
     activeIndex = index;
 

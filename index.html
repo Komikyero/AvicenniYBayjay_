@@ -1,47 +1,208 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta http-equiv="refresh" content="5; url=MainPage.html">
-    <style>
-        body {
-            background-color: rgb(7, 29, 2);
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-            display: flex;
-            justify-content: center; 
-            align-items: center;     
-            height: 100vh;           
-            flex-direction: column;  
-            margin: 0;               
-        }
+<title>Avicennia Y Bayjay</title>
 
-        p {
-            display: none;
-        }
+<style>
 
-        img {
-            width: 25%;
-            height: auto;
-            align-self: center;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-            transition: all 0.2s ease-in-out;
-            animation: rotate;
-            animation-timing-function: linear;
-            animation-duration: 4s;
-            animation-iteration-count: 1;
-        }
+body{
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+    background:#071d02;
+    font-family:Arial, Helvetica, sans-serif;
+}
 
-        @keyframes rotate {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
-        }
-    </style>
+/* =========================
+   SPLASH SCREEN
+========================= */
+
+#splashScreen{
+    position:fixed;
+    inset:0;
+
+    background:#071d02;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+
+    overflow:hidden;
+
+    z-index:9999;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logoWrap{
+    position:relative;
+    z-index:5;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.logoWrap img{
+    width:220px;
+    height:auto;
+
+    animation:rotate 3s linear;
+}
+
+.logoText{
+    margin-top:20px;
+
+    color:white;
+    font-size:1.5rem;
+    letter-spacing:5px;
+    text-align:center;
+}
+
+/* =========================
+   RIPPLE EFFECT
+========================= */
+
+.ripple{
+    position:absolute;
+
+    width:100px;
+    height:100px;
+
+    border-radius:50%;
+
+    border:2px solid rgba(255,255,255,0.2);
+
+    animation:rippleAnim 4s linear infinite;
+}
+
+.ripple:nth-child(1){
+    animation-delay:0s;
+}
+
+.ripple:nth-child(2){
+    animation-delay:1s;
+}
+
+.ripple:nth-child(3){
+    animation-delay:2s;
+}
+
+.ripple:nth-child(4){
+    animation-delay:3s;
+}
+
+/* =========================
+   REVEAL ANIMATION
+========================= */
+
+#splashScreen.reveal{
+    animation:waterReveal 1.5s cubic-bezier(.76,.01,.19,1) forwards;
+}
+
+@keyframes waterReveal{
+
+    0%{
+        clip-path:circle(150% at 50% 50%);
+    }
+
+    100%{
+        clip-path:circle(0% at 50% -20%);
+        visibility:hidden;
+    }
+}
+
+/* =========================
+   LOGO ROTATION
+========================= */
+
+@keyframes rotate{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+/* =========================
+   RIPPLE ANIMATION
+========================= */
+
+@keyframes rippleAnim{
+
+    0%{
+        transform:scale(0.5);
+        opacity:0.9;
+    }
+
+    100%{
+        transform:scale(14);
+        opacity:0;
+    }
+}
+
+</style>
 </head>
+
 <body>
-    <p>Redirecting to <a href="MainPage.html">Home</a>...</p>
-    <img src="logo.png"/>
+
+<div id="splashScreen">
+
+    <div class="ripple"></div>
+    <div class="ripple"></div>
+    <div class="ripple"></div>
+    <div class="ripple"></div>
+
+    <div class="logoWrap">
+
+        <img src="logo.png" alt="Logo">
+
+        <div class="logoText">
+            AVICENNIA Y BAYJAY
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+window.addEventListener("load", () => {
+
+    const splash = document.getElementById("splashScreen");
+
+    setTimeout(() => {
+
+        splash.classList.add("reveal");
+
+        // redirect after animation
+        setTimeout(() => {
+
+            window.location.href = "MainPage.html";
+
+        }, 1400);
+
+    }, 2500);
+
+});
+
+</script>
+
 </body>
 </html>

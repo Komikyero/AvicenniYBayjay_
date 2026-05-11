@@ -61,7 +61,7 @@ html {
 body {
     overflow-x: hidden;
 
-    font-family: var(--main-font);
+    font-family:'Times New Roman', Times, serif;
     font-weight: 100;
     font-style: normal;
 }
@@ -88,7 +88,7 @@ body {
     flex-direction: column;
     justify-content: center;
 
-    padding: 45px;
+    padding: 45px 2.55rem;
     color: white;
 
     pointer-events: none;
@@ -103,9 +103,9 @@ body {
 }
 
 #HeroText hr {
-    width: clamp(100px, 50%, 150px);
+    width: clamp(100px, 30%, 350px);
     margin-top: 0.5rem;
-    margin-bottom: 1.2rem;
+    margin-bottom: 0.5rem;
 }
 
 #HeroText h1 {
@@ -128,11 +128,11 @@ body {
 }
 
 #HeroText p{
-    font-size: clamp(0.9rem, 0.4vw, 0.7rem);
+    font-size: clamp(0.9rem, 0.6vw, 1rem);
     font-weight: 100;
     font-style: normal; 
     
-    width: clamp(160px, 60%, 600px);
+    width: clamp(10px, 60%, 400px);
 }
 
 .HomepageBG {
@@ -157,7 +157,7 @@ body {
 }
 
 .History {
-    background-color: #EEF5E9;
+    background-color: #FFF7E0;
     color: var(--TextColorDark);
 
     width: 100%;
@@ -173,14 +173,6 @@ body {
 
     display: flex;
     flex-direction: column;
-    gap: 3rem;
-}
-
-.HistoryContent {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    padding: 3rem;
     gap: 2rem;
 }
 
@@ -188,8 +180,12 @@ body {
     flex: 1;
 }
 
+#histTitle {
+    padding-bottom: 0.5rem;
+}
+
 .HistoryImage {
-    width: clamp(250px, 70vw, 1000px);
+    width: 100%;
     margin: 1rem auto 5rem auto;
     height: 400px; 
 
@@ -197,7 +193,7 @@ body {
 
     background-size: cover;
     background-position: center;
-    background-color: blue;
+    background-image: url(images/TestIMG2.jpg);
     box-shadow: 
     0 3px 10px rgba(0, 0, 0, 0.12),
     0 10px 25px rgba(0, 0, 0, 0.18);
@@ -222,14 +218,15 @@ body {
     justify-content: center;
     align-items: center;
     color: var(--TextColorLight);
-    padding: 0.6rem 1.5rem;
+        
+    padding: 0.6rem 0.8rem;
+    font-size: clamp(1.1rem, 2vw, 2rem);
 
-    border-radius: 999px;
+    border-radius: 1rem;
 
     background: #324721;
 
     font-family: var(--header-font);
-    font-size: 0.75rem;
 
     z-index: 10;
 }
@@ -256,6 +253,8 @@ body {
     animation: bounce 1.5s infinite;
     cursor: pointer;
     z-index: 100;
+
+    transition: opacity 0.3s ease-in-out;
 }
 
 .ScrollDown .arrow {
@@ -266,6 +265,17 @@ body {
     font-size: clamp(0.7rem, 1.5vw, 0.7rem);
     margin: -1rem;
 }
+
+.ScrollDown:hover {
+    color: white;
+    opacity: 1;
+}
+
+.ScrollDown:active {
+    color: white;
+    opacity: 1;
+}
+
 
 /*RENDERING*/
 .reveal {
@@ -312,6 +322,14 @@ body {
         font-size: 1.3rem;
     }
 
+    #HeroText h1 {
+        margin-bottom: 3rem;
+    }
+
+    #HeroText hr {
+        margin-bottom: 1rem;
+    }
+
     body {
         font-size: 1.1rem;
     }
@@ -319,24 +337,20 @@ body {
     h1 {
         font-size: 3.5rem;
     }
+
+    .History {
+        padding: 5rem 0;
+    }
+
+    .HistoryImage {
+        width: 80%;
+        height: 600px; 
+
+        background-position: 50% 20%;
+    }
 }
 
 @media (min-width: 900px) {
-    .FestivalWrapper {
-        flex-direction:row-reverse;
-        align-items: center;
-        gap: 4rem;
-    }
-
-    .FestivalContent {
-        flex: 1;
-    }
-
-    .FestivalImage {
-        flex: 1;
-        max-width: 650px;
-    }
-
 
 }
 

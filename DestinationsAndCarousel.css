@@ -62,12 +62,24 @@
     margin-top: 1rem;
     font-size: 0.85rem;
 
-    text-decoration: none;
-    color: white;
+    display: block;
     padding: 0.5rem 1.5rem;
 
+    text-align: center;
+    text-decoration: none;
+
+    color: white;
+    background: transparent;
+
+    border: 2px solid white;
+    border-radius: 2rem;
+
     position: relative;
-    display: inline-block;
+    overflow: hidden;
+
+    box-sizing: border-box;
+
+    transition: color 0.3s ease, border-color 0.3s ease;
 }
 
 #Button::after {
@@ -75,22 +87,21 @@
     position: absolute;
     inset: 0;
 
-    border: 2px solid white;
-    border-radius: 2rem;
+    background: var(--BGColor);
+    transform: scaleX(0);
+    transform-origin: left;
 
-    transform: scale(0.8);
-    opacity: 0;
-    transition: 0.3s ease;
+    transition: transform 0.3s ease;
+    z-index: -1;
 }
 
 #Button:hover::after {
-    transform: scale(1);
-    opacity: 1;
+    transform: scaleX(1);
 }
 
-#Button:active::after {
-    transform: scale(1);
-    opacity: 1;
+#Button:hover {
+    border-color: var(--BGColor);
+    color: white;
 }
 
 .DCarousel {
@@ -100,6 +111,7 @@
     bottom: 40px;
 
     width: 100%;
+    max-width: 100vw; 
     height: 200px;
 
     display: flex;
@@ -110,7 +122,7 @@
 
 .DTrack {
     display: flex;
-    gap: 20px;
+    gap: 20.5px;
 
     position: absolute;
     left: 0;
@@ -118,7 +130,6 @@
     
     transition: transform 0.4s ease;
     will-change: transform;
-
     z-index: 11;
 }
 
@@ -131,7 +142,7 @@
 #ImageContainer {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.5rem;
 }
 
 .Dcard {
@@ -162,6 +173,20 @@
 
 .Dcard.active:hover {
     animation-play-state: running;
+}
+
+.locationInfoWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    gap: 0.5rem;
+    margin-left: 5%;
+}
+
+.LocationLogo {
+    width: 40px;
+    height: 40px;
+    border: 1px solid red;
 }
 
 #DestinationCardLabel {
@@ -202,9 +227,12 @@
     justify-content: center; 
     text-align: center;
     padding: 0.9rem 1.2rem;
+
+    margin: 1.2rem;
+
     margin: 0 auto;
     border-radius: 1rem;
-
+    
     text-decoration: none;
 
     background: linear-gradient(
@@ -315,7 +343,7 @@
     height: 100%;
     overflow-y: auto;
     overflow-x: hidden;
-
+    padding-bottom: 2rem;
     border-radius: 1rem;
 }
 
@@ -330,7 +358,7 @@
 
 #DisplayCardBG {
     width: 90%;
-    height: 10rem;
+    height: clamp(10rem, 15vw, 18rem);
     box-shadow: 
     0 10px 25px rgba(0, 0, 0, 0.18);
     background-color: red;

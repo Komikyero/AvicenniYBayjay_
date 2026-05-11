@@ -5,91 +5,96 @@
 }
 
 .Weaving {
-    background-color: var(--ContentBG);
-    height: fit-content;
-    min-height: 100vh;
-    padding: 1rem 0 1rem 0;
+    background-color: #D8C3A5;
+    width: 100%;
+    height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-}
-
-#WContentBox {
-    background-color: var(--Primary-Color);
-    box-shadow: 
-    0 3px 10px rgba(117, 117, 117, 0.12),
-    0 10px 25px rgba(117, 117, 117, 0.18);
-}
-
-.Pottery {
-    background-color: var(--Primary-Color);
-    height: fit-content;
-    min-height: 100vh;
-    padding: 1rem 0 1rem 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#PContentBox {
-    background-color: var(--ContentBG);
-    box-shadow: 
-    0 3px 10px rgba(0, 0, 0, 0.12),
-    0 10px 25px rgba(0, 0, 0, 0.18);
+    justify-content: space-between;
+    box-sizing: border-box;
+    box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.35),
+    0 10px 25px rgba(80, 55, 35, 0.25),
+    -15px 0 30px -10px rgba(80, 55, 35, 0.25),
+    15px 0 30px -10px rgba(80, 55, 35, 0.25);
 }
 
 .SideImg {
-    height: clamp(8rem, 15vw, 14rem);
+    height: 30%;
     width: 100%;
     object-fit: cover;
     display: block;
-
-    border-radius: 0.5rem;
+    margin: 0;
+    padding: 0;
 }
 
 .ItemContainer p {
-    border: 1px solid green;
+    padding: 1rem;
 }
 
 .SmallImg {
-    height: 5rem;
+    width: 90%;
+    height: 40%;
+    border-radius: 1rem;
+    margin: 1rem;
+    background-image:
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+            url(images/Weaving2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end;
+
+    position: relative;
+    z-index: 10;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.18);
+}
+
+#HeaderVertWrap {
+    display: flex;
+    flex-direction: column;
+    gap: -5rem;
+    margin: 1rem 0.5rem;
+}
+
+#TextContent {
     width: 100%;
-    object-fit: cover;
-    display: block;
-    border: 1px solid blue;
-    border-radius: 0.5rem;
+    height: 100%;
 }
 
 .ItemContainer {
-    width: 100%;
-}
-
-.ContentGrid {
+    font-size: 0.9rem;
+    font-style: normal;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    justify-content: flex-start; 
-    padding: 1rem;
-    box-sizing: border-box;
-}
-
-#Test {
-    border: 1px solid red;
+    padding-top: 0.5rem;
 }
 
 .Contentbox {
-    height:  100%;
-    width: 90%;
-    border-radius: 1rem;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-sizing: border-box;
+    transition: transform 0.6s ease;
+    z-index: 1;
 }
 
 .CVerticalWrapper {
     display: flex;
     flex-direction: column;
     gap: 15px;
-
+    width: 100%;
+    height: 100%;
 }
 
 .Products {
@@ -103,62 +108,157 @@
     overflow: hidden;
 }
 
-.Products::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-
-    background-color: #fff7e0;
-    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2H0v-2h20v-2H0V8h20V6H0V4h20V2H0V0h22v20h2V0h2v20h2V0h2v20h2V0h2v20h2V0h2v20h2v2H20v-1.5zM0 20h2v20H0V20zm4 0h2v20H4V20zm4 0h2v20H8V20zm4 0h2v20h-2V20zm4 0h2v20h-2V20zm4 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2z' fill='%23321d16' fill-opacity='0.18' fill-rule='evenodd'/%3E%3C/svg%3E");
-    background-repeat: repeat;
-    background-size: 40px 40px;
-    
-    pointer-events: none;
-}
-
 .Border {
     width: 100%;
     height: 2rem;
-    background-color: blue;
-}
-
-.ProductHeader {
-    font-size: 1.1rem;
 }
 
 #WText {
-    color: var(--TextColorLight);
-}
-
-#PText {
     color: var(--TextColorDark);
-}
-
-.ItemContainer {
-    font-size: 0.9rem;
-    font-style: normal;
 }
 
 .ItemContainer p {
     text-align: start;
+    font-size: clamp(0.9rem, 1.6vw, 1.4rem);
 }
 
+.TabButtons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#productTitle {
+    font-size: clamp(1.1rem, 2vw, 2rem);
+    color: var(--TextColorLight);
+}
+
+#productSubTitle {
+    font-size: clamp(0.75rem, 1.2vw, 0.95rem);
+    opacity: 0.85;
+    color: white;
+    font-weight: 400;
+    padding: 0;
+    letter-spacing: 0.03em;
+}
+
+.TabButton {
+    margin-top: 1rem;
+    font-size: clamp(0.9rem, 1.6vw, 1.4rem);
+    font-family: 'Times New Roman', Times, serif;
+    display: block;
+    padding: 0.5rem 1.5rem;
+
+    text-align: center;
+    text-decoration: none;
+
+    color: var(--TextColorDark);
+    background: transparent;
+
+    border: 2px solid var(--TextColorDark);
+    border-radius: 2rem;
+
+    position: relative;
+    overflow: hidden;
+
+    box-sizing: border-box;
+    z-index: 1;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.TabButton.active {
+    background: var(--TextColorDark);
+    color: white;
+}
+
+.TabButton::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: var(--BGColor);
+    transform: scaleX(0);
+    transform-origin: left;
+
+    transition: transform 0.3s ease;
+    z-index: -1;
+}
+
+.TabButton:hover::after {
+    transform: scaleX(1);
+}
+
+.TabButton:hover {
+    border-color: var(--BGColor);
+    color: white;
+}
+
+.TabButton:active {
+    border-color: var(--BGColor);
+    color: white;
+}
+
+
+
 @media (min-width: 600px) {
-.ContentGrid {
+.CVerticalWrapper {
+    display: flex;
     flex-direction: row;
+    justify-content: flex-end;
 }
 
 .ItemContainer {
     font-size: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.SmallImg {
+    width: 90%;
+    margin: 10% 1rem 1rem 1rem;
+}
+
+#TextContent {
+    width: 90%;
+    height: 50%;
+}
+
+.SideImg,
+.Contentbox {
+    transition: transform 0.6s ease;
+}
+
+.Weaving.slide-left .SideImg {
+    transform: translateX(0);
+}
+
+.Weaving.slide-left .Contentbox {
+    transform: translateX(0);
+}
+
+.Weaving.slide-right .SideImg {
+    transform: translateX(calc(100vw - 100%));
+}
+
+.Weaving.slide-right .Contentbox {
+    transform: translateX(calc(-100vw + 100%));
 }
 
 }
 
 @media (min-width: 900px) {
     .SideImg {
-        width: 100%;
-        max-height: 20rem;
-        height: auto;
+        width: 40%;
+        height: 100%;
+    }
+
+    .Weaving {
+        flex-direction: row;
+    }
+
+    .Pottery {
+        flex-direction: row;
     }
 }
 

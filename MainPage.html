@@ -47,10 +47,24 @@
                         <h3 id="DestinationCardLabel">Label</h3>
                         <h1 id="DestinationCardName">Name</h1>
                         <div id="LocationWrapper">
-                            <p>SomeWhere Ibajay</p>
-                            <p>Somethhing away from proper</p>
+
+                            <div class="locationInfoWrap">
+                            <img class="LocationLogo" src="images/pin.png" alt="Pin"/>
+                                <div class="DTextWrapper">
+                                    <h3>LOCATION</h3>
+                                    <p id="BrgyText">Baranggay pitiw piw wiw wiw</p>
+                                </div>
+                            </div>
+
+                            <div class="locationInfoWrap">
+                            <img class="LocationLogo" src="images/car.png" alt="Car"/>
+                                <div class="DTextWrapper">
+                                    <h3>HOW TO GET THERE</h3>
+                                    <p id="DistanceText">Baranggay pitiw piw wiw wiw</p>
+                                </div>
+                            </div>
                         </div>
-                        <hr/>
+
                         <p id="CardDescription">Text</p>
                         <a href="#" class="DirectionsBtn">
                             <img src="map.png" alt="">
@@ -107,7 +121,7 @@
                     <ul data-slides>
                         <li class="slide" data-active>    
                             <video loop autoplay muted playsinline>
-                                <source src="https://res.cloudinary.com/dltdjydbk/video/upload/v1778331148/Background_gjfiyi.mp4" type="video/mp4">
+                                <source src="Background.mp4" type="video/mp4">
                             </video></li>
                         <li class="slide"><img src="images/DJI_0203.jpg"></li>
                         <li class="slide"><img src="images/387145350_144651095396296_7959629525284625735_n.jpg"></li>
@@ -153,6 +167,8 @@
                         data-bg="images/DSCN0520.jpg"
                         data-label="BEACH"
                         data-title="Ibajay Beach"
+                        data-brgy="Barangay Bugtong-Bato, Ibajay, Aklan"
+                        data-distance="Located near the Katunggan It Ibajay mangrove forest, allowing visitors to explore both coastal and mangrove ecosystems"
                         data-desc="A long stretch of pristine shoreline offering calm waters, fresh sea breeze, and laid-back island vibes. Ideal for family outings and beach relaxation."
                         data-carddesc="A long stretch of white sand coastline with calm waters and scenic views. It is ideal for swimming, picnics, and family outings. Its peaceful atmosphere makes it a relaxing seaside destination."
                         style="background-image: url('images/DSCN0520.jpg');">
@@ -162,6 +178,8 @@
                         data-bg="ph2.jpg"
                         data-label="NATURAL"
                         data-title="Katunggan It Ibajay"
+                        data-brgy="Barangay Bugtong-Bato, Ibajay, Aklan"
+                        data-distance="Approximately 45 to 60 minutes from Poblacion, Ibajay"
                         data-desc="Step into a living mangrove sanctuary with a scenic wooden boardwalk surrounded by lush forests and wildlife. A must-visit eco-adventure for nature lovers and photographers."
                         data-carddesc="Katunggan It Ibajay is a 44.22-hectare eco-park known for its rich mangrove forest ecosystem and elevated wooden boardwalk. Home to 28 mangrove species, including the rare Avicennia rumphiana, the park also serves as a sanctuary for wildlife and migratory birds. Visitors can enjoy nature walks, birdwatching, and educational eco-tours while learning about environmental conservation."
                         style="background-image: url('ph2.jpg');">
@@ -171,14 +189,18 @@
                         data-bg="ph3.jpg"
                         data-label="WATERFALL"
                         data-title="Sinba-a Falls"
+                        data-brgy="Barangay Bugtong-Bato, Ibajay, Aklan"
+                        data-distance="Approximately 45 to 60 minutes from Poblacion, Ibajay"
                         data-desc="A hidden multi-tiered waterfall surrounded by lush forest. It offers a refreshing nature escape with cool pools and a short trek through scenic trails."
-                        style="background-image: url('images/DSCN0520.jpg');"> <!--duplicates the first three to the right-->
+                        style="background-image: url('images/DSCN0520.jpg');"> 
                     </div>
 
                     <div class="Dcard"
                         data-bg="ph2.jpg"
                         data-label="MOUNTAIN"
                         data-title="Mount Balinsayaw"
+                        data-brgy="Barangay Bugtong-Bato, Ibajay, Aklan"
+                        data-distance="Approximately 45 to 60 minutes from Poblacion, Ibajay"
                         data-desc="A beginner-friendly hiking destination with scenic forest trails and a summit view overlooking Aklan and Antique. Popular for trekking and nature exploration"
                         style="background-image: url('ph2.jpg');">
                     </div>
@@ -187,6 +209,8 @@
                         data-bg="ph3.jpg"
                         data-label="NATURAL"
                         data-title="Ibajay River"
+                        data-brgy="Barangay Bugtong-Bato, Ibajay, Aklan"
+                        data-distance="Approximately 45 to 60 minutes from Poblacion, Ibajay"
                         data-desc="A major river system known for clear waters, rapids, and eco-tourism activities like rafting and kayaking. It also supports local fishing and farming communities."
                         style="background-image: url('ph3.jpg');">
                     </div>
@@ -195,6 +219,8 @@
                         data-bg="ph2.jpg"
                         data-label="NATURAL"
                         data-title="Nablian Cold Spring"
+                        data-brgy="Barangay Bugtong-Bato, Ibajay, Aklan"
+                        data-distance="Approximately 45 to 60 minutes from Poblacion, Ibajay"
                         data-desc="A natural cold spring surrounded by greenery, featuring swimming pools, cottages, and picnic areas. A relaxing family-friendly destination close to town."
                         style="background-image: url('ph2.jpg');">
                     </div>
@@ -203,6 +229,8 @@
                         data-bg="ph3.jpg"
                         data-label="NATURAL"
                         data-title="Campo Verde"
+                        data-brgy="Along the border of the municipalities of Tangalan and Ibajay, Aklan"
+                        data-distance="28 kms west traveling distance from the capital town of Kalibo"
                         data-desc="A highland nature retreat known for its cool climate, pine forests, and trekking trails. A popular destination for camping, hiking, and summer escapes."
                         style="background-image: url('ph3.jpg');">
                     </div>
@@ -210,7 +238,9 @@
                     <div class="Dcard"
                         data-bg="ph2.jpg"
                         data-label="RESORT"
-                        data-title="Gradels Place Beach Resort"
+                        data-brgy="Barangay Bugtong-Bato, Ibajay, Aklan"
+                        data-distance="Located about 1 hour from Poblacion"
+                        data-title="Gradels Place Beach Resort and Hotel"
                         data-desc="A beachfront resort offering cottages, a swimming pool, and relaxing sea views. A quiet getaway perfect for swimming, dining, and sunset experiences."
                         style="background-image: url('ph2.jpg');">
                     </div>
@@ -219,6 +249,8 @@
                         data-bg="ph3.jpg"
                         data-label="HOTEL"
                         data-title="Jamins Hotel"
+                        data-brgy="Barangay Colongcolong, Ibajay, Aklan"
+                        data-distance="Approximately 5 minutes from Poblacion, about 30 minutes from Caticlan Airport, making it accessible for both local and international travelers."
                         data-desc="A modern tropical beachfront hotel featuring an infinity pool, garden setting, café, and event spaces. Conveniently located near town and accessible from the airport, ideal for leisure and events."
                         style="background-image: url('ph3.jpg');">
                     </div>
@@ -227,6 +259,8 @@
                         data-bg="ph2.jpg"
                         data-label="CAFÉ"
                         data-title="Brewmstick Cafe"
+                        data-brgy="Barangay Colong-colong, Ibajay, Aklan"
+                        data-distance="Along the highway in Colong-colong, just 5 to 10 minutes from Poblacion"
                         data-desc="A modern and cozy café known for its signature coffee drinks, pastries, and relaxing ambiance. Popular among locals and tourists as a casual hangout and remote work spot along the highway."
                         style="background-image: url('ph2.jpg');">
                     </div>
@@ -235,6 +269,8 @@
                         data-bg="ph3.jpg"
                         data-label="LANDMARK"
                         data-title="Gavino Solidum Park"
+                        data-brgy="Barangay Poblacion, Ibajay, Aklan"
+                        data-distance="Within walking distance from Poblacion"
                         data-desc="The town’s central public plaza featuring landscaped gardens, open spaces, and event areas. It serves as the main venue for festivals, community gatherings, and daily recreation."
                         style="background-image: url('ph3.jpg');">
                     </div>
@@ -243,6 +279,8 @@
                         data-bg="ph2.jpg"
                         data-label="HERITAGE"
                         data-title="Santo Niño de Ibajay Parish"
+                        data-brgy="Barangay Poblacion, Ibajay, Aklan"
+                        data-distance="Located in the town center, it is easily accessible from Poblacion"
                         data-desc="A historic Catholic church and spiritual landmark known for its devotion to Santo Niño. It plays a central role in religious celebrations and cultural traditions in Ibajay."
                         style="background-image: url('ph2.jpg');">
                     </div>
@@ -251,6 +289,8 @@
                         data-bg="ph3.jpg"
                         data-label="HERITAGE"
                         data-title="Parish of St. Peter the Apostle"
+                        data-brgy="Barangay Poblacion, Ibajay, Aklan"
+                        data-distance="Located in the town center, it is easily accessible from Poblacion"
                         data-desc="A well-known church featuring stained-glass windows and a prominent bell tower. It serves as a major place of worship and community activities in the town center."
                         style="background-image: url('ph3.jpg');">
                     </div>
@@ -259,21 +299,28 @@
                         data-bg="ph2.jpg"
                         data-label="NATURAL"
                         data-title="Nawidwid Falls"
+                        data-brgy="Barangay Bugtong-Bato, Ibajay, Aklan"
+                        data-distance="Approximately 45 to 60 minutes from Poblacion, Ibajay"
                         data-desc="A tall and secluded waterfall surrounded by dense greenery. A great spot for adventure seekers, photography, and nature swimming after a forest hike."
                         style="background-image: url('ph2.jpg');">
                     </div>
 
                     <div class="Dcard"
                         data-bg="ph3.jpg"
-                        data-label="NATURAL"
+                        data-label="HOTEL"
                         data-title="L and C Housetel"
+                        data-brgy="Barangay Bugtong-Bato, Ibajay, Aklan"
+                        data-distance="Approximately 45 to 60 minutes from Poblacion, Ibajay"
                         data-desc="A budget-friendly accommodation in the town center offering comfortable rooms and easy access to markets, churches, and municipal areas."
                         style="background-image: url('ph3.jpg');">
                     </div>
 
                     <div class="Dcard"
                         data-bg="ph3.jpg"
+                        data-label="VENUE"
                         data-title="Satoriya"
+                        data-brgy="Barangay Sitio Pangpang, Laguinbanua, Ibajay, Aklan"
+                        data-distance="Approximately 5 to 10 minutes from Poblacion, Ibajay"
                         data-desc="A peaceful nature retreat and events venue surrounded by greenery. Ideal for weddings, gatherings, and private relaxation away from the town center."
                         style="background-image: url('ph3.jpg');">
                     </div>
@@ -281,42 +328,36 @@
             </div>
 
         </div>
-
+        
         <!--PRODUCTS-->
         <div class="Weaving" id="Products">
+
+            <img id="productImg" src="images/Weaving1.jpg" class="SideImg reveal">
+
             <div id="WContentBox" class="Contentbox">
-                 <div class="ContentGrid" id="Test">
-                    <img src="images/Weaving1.jpg" class="SideImg reveal">
-                    <div class="CVerticalWrapper">
-                        <div class="ItemContainer" id="WText">
-                            <p id="ProductHeader" class="reveal">Threads of Tradition</p>
-                            <p class="reveal">Weaving in Ibajay is a cultural practice shaped by generations of craftsmanship and tradition. Using nito vines and abaca fibers, artisans create functional and decorative products that reflect skill, patience, and creativity.</p>
-                            <p class="reveal">Rooted in local heritage, each woven piece highlights the community’s connection to nature and sustainable living. These handcrafted works preserve traditional techniques while continuing to serve everyday use and cultural expression.</p>
-                            <img src="images/Weaving2.jpg" class="SmallImg reveal">
-                        </div>  
-                    </div>
-                </div>
-            </div>
-        </div>
+                <div class="CVerticalWrapper">
+                    <div class="ItemContainer" id="WText">
 
-        <div class="Pottery">
-            <div id="PContentBox" class="Contentbox">
-                <div class="ContentGrid">                    
-                    <div class="CVerticalWrapper reveal">
-                        <div class="ItemContainer" id="PText">
-                            <h1>Rooted in Tradition,</h1>
-                            <h1>Crafted by Nature.</h1>
-                            <img src="Images/Pottery1.jpg" class="SmallImg reveal">
-                            <p id="ProductHeader" class="reveal">Nature To Craft</p>
-                            <p class="reveal">From forest vines and plant fibers to hand-shaped clay, explore Ibajay’s rich tradition of nito, abaca, and pottery. Each creation embodies sustainability, heritage, and the skill of dedicated artisans.</p>
-                            <p class="reveal">Rooted in Ibajay’s close relationship with its natural environment, local artisans turn raw materials like forest vines, plant fibers, and clay into meaningful creations. From nito weaving and abaca processing to handmade pottery, these crafts reflect a lifestyle shaped by sustainability, creativity, and respect for the land that sustains the community.</p>
+                        <div class="SmallImg reveal" id="HeaderIMG">
+                            <div id="HeaderVertWrap">
+                                <h1 id="productTitle">Threads of Tradition</h1>
+                                <p id="productSubTitle">📍 Barangay Mabusao • Regador • San Jose, Ibajay, Aklan</p>
+                            </div>
                         </div>
-                    </div>
-                    <img src="images/Pottery2.jpg" class="SideImg reveal">
+
+                        <div class="TabButtons reveal">
+                            <button onclick="moveLeft()" class="TabButton active" data-tab="weaving">Weaving</button>
+                            <button onclick="moveRight()" class="TabButton" data-tab="pottery">Pottery</button>
+                        </div>
+                        <div id="TextContent">
+                            <p id="productText1" class="reveal">Weaving in Ibajay is a cultural practice shaped by generations of craftsmanship and tradition. Using nito vines and abaca fibers, artisans create functional and decorative products that reflect skill, patience, and creativity</p>
+                            <p id="productText2" class="reveal">Rooted in local heritage, each woven piece highlights the community's connection to nature and sustainable living. The handcrafted works preserve traditional techniques while continuing to serve everyday use.</p>
+                        </div>
+                    </div>  
                 </div>
             </div>
-        </div>
 
+        </div>
 
         <div class="Products">
 
@@ -391,12 +432,12 @@
                 <div class="Timeline reveal">
 
                     <div class="Step active" data-index="0">
-                        <span class="StepDesc">Street Dancing Competitions</span>
+                        <span class="StepDesc">Street Dancing (Sadsad)</span>
                         <p class="StepDescText">Watch groups perform synchronized routines in striking tribal-inspired costumes, moving to the beat of drums.</p>
                     </div>
 
                     <div class="Step" data-index="1">
-                        <span class="StepDesc">Drum Beating and Music Performances</span>
+                        <span class="StepDesc">Drum/Music Performances</span>
                         <p class="StepDescText">Feel the pulse of the festival through powerful rhythms echoing across the streets.</p>
                     </div>
 
@@ -415,7 +456,7 @@
             </div>
                 <div class="FestivalImage reveal" id="festImage">            
                     <div class="label reveal">
-                        <h1>January • Every Year</h1>
+                        <p>January • Every Year</p>
                     </div>
                 </div>
 
@@ -426,8 +467,6 @@
         <div class="History" id="History">
 
             <div class="HistoryWrapper">
-
-             <div class="HistoryContent">
 
                 <div class="HistoryText reveal">
                     <h1 id="histTitle">History</h1>
@@ -443,13 +482,11 @@
                     Today, Ibajay stands as a municipality that balances heritage and progress—preserving its traditions while embracing development. Known for its warm community, cultural richness, and natural beauty, it continues to live up to its identity as a “Paradise in Seclusion.”</p>
                 </div>
 
-            </div>
-
-            <div class="HistoryImage reveal" id="histImage">            
-                <div class="HistoryLabel reveal">
-                    <h1>Established in 1673</h1>
+                <div class="HistoryImage reveal" id="histImage">            
+                    <div class="HistoryLabel reveal">
+                        <p>Established in 1673</p>
+                    </div>
                 </div>
-            </div>
 
             </div>
         </div>
@@ -464,8 +501,8 @@
 
                 <div id="AboutUsGridWrapper">
                     <div class="AboutTabs reveal">
-                        <button class="tab active " data-tab="team">Our Team</button>
-                        <button class="tab" data-tab="expo">School Expo</button>
+                        <p class="tab active" data-tab="team">Our Team</p>
+                        <p class="tab" data-tab="expo">School Expo</p>
                     </div>
 
                     <div class="AboutContent">
