@@ -164,7 +164,7 @@
 }
 
 .static.scrolled {
-    background: rgba(63, 75, 53, 0.89); 
+    background: rgba(30, 45, 20, 0.89);  
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -172,45 +172,144 @@
     position: fixed;
     top: 0;
     right: 0;
-    width: 100%;
-    height: 80vh;
+    width: 280px;
+    height: 100vh;
 
-    background: #5F6B3F;
-    transform: translateY(-100%);
-    transition: 0.4s ease;
+    background: #1e2d14;
+    border-left: 1px solid rgba(255,255,255,0.07);
+
+    display: flex;
+    flex-direction: column;
+
+    transform: translateX(100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
     z-index: 1006;
-    display: flex;
 }
 
 #SideBar.Show {
-    transform: translateY(0);
+    transform: translateX(0);
+}
+
+#Close {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.07);
+    border: none;
+    color: rgba(255,255,255,0.5);
+    font-size: 0.85rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease, color 0.2s ease;
+    flex-shrink: 0;
+}
+
+#Close:hover {
+    background: rgba(255,255,255,0.14);
+    color: white;
+}
+
+.Sidebar_Brand {
+    padding: 2rem 1.8rem 1.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    margin-top: 1rem;
+}
+
+.Sidebar_Brand h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #c8d8a0;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0;
+    border-bottom: none;
+    margin-top: 0;
+}
+
+.Sidebar_Brand p {
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.35);
+    margin-top: 3px;
+    letter-spacing: 0.04em;
 }
 
 .Sidebar_Container {
-    width: 100%;
-    padding: 1rem;
-}
-
-.Sidebar_Container li {
     list-style: none;
-    font-size: 2rem;
     padding: 1rem 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
-.Sidebar_Container a {
+.Sidebar_Container li a {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 0.75rem 1.8rem;
     text-decoration: none;
-    font-size: 1rem;
-    color: white;
+    color: rgba(255,255,255,0.55);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
-    font-weight: bold;
+    position: relative;
+    transition: color 0.2s ease, background 0.2s ease, padding-left 0.2s ease;
+}
+
+.Sidebar_Container li a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) scaleY(0);
+    width: 3px;
+    height: 60%;
+    background: #8fbc4f;
+    border-radius: 0 2px 2px 0;
+    transition: transform 0.2s ease;
+}
+
+.Sidebar_Container li a:hover {
+    color: #c8d8a0;
+    background: rgba(255,255,255,0.04);
+    padding-left: 2.2rem;
+}
+
+.Sidebar_Container li a:hover::before {
+    transform: translateY(-50%) scaleY(1);
+}
+
+.Sidebar_Container li a i {
+    font-size: 16px;
+    opacity: 0.7;
+    flex-shrink: 0;
+}
+
+.Sidebar_Footer {
+    padding: 1.2rem 1.8rem;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    font-size: 0.68rem;
+    color: rgba(255,255,255,0.2);
+    letter-spacing: 0.06em;
+}
+
+#HorizonBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 1.1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
 }
 
 #Close {
     text-align: right;
     font-size: 2rem;
     cursor: pointer;
-    color: #743014;
+    color: #8b8b8b;
 }
 
 #Overlay {
@@ -232,7 +331,7 @@
 }
 
 footer {
-    background: #3F4B35;
+    background: #1a2910  ;
     color: white;
     text-align: center;
 }
@@ -291,7 +390,9 @@ footer {
 }
 
 #FFooter {
-    background: #120A08;
+    background: #111d0a;
+    color: #6a8a50 ;
+    border-top: 1px solid #3a5a20;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.61);
     padding: 1.4rem 1rem 5rem 1rem;
 }

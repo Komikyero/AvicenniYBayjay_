@@ -9,7 +9,7 @@
     --Forest-Green: #556B4F;
 
     --TextLight: #FFF8EE;
-    --TextDark: #2E1C11;
+    --TextDark: #442D1C;
 }
 
 .Weaving {
@@ -17,7 +17,7 @@
     min-height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
-    background: linear-gradient(135deg, #F8EDD6 0%, #EDD9A3 100%);
+    background-color: #E8D1A7;
     overflow: hidden;
 }
 
@@ -152,7 +152,7 @@
 }
 
 #TextContent p {
-    font-size: 1rem;
+    font-size: clamp(0.95rem, 1.4vw, 1.08rem);
     line-height: 1.9;
     color: rgba(46,28,17,0.8);
 }
@@ -184,10 +184,6 @@
 @media (min-width: 1024px) {
     .Contentbox {
         padding: 5rem 4rem 5rem 2rem;
-    }
-
-    #TextContent p {
-        font-size: 1rem;
     }
 }
 

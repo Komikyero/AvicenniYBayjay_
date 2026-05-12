@@ -1,7 +1,7 @@
 :root {
     --BGColor: #3F4B35;
     --ContentBG: #F7F0ED;
-    --Primary-Color: #321D16;
+    --Primary-Color: #442D1C;
     --TextColorLight: #F7F0ED;
     --TextColorDark: #442D1C;
 
@@ -112,6 +112,11 @@ html.modal-open {
     width: clamp(100px, 30%, 350px);
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
+    border: none;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.28);
+    width: 0;
+    animation: growLine 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.95s forwards;
 }
 
 #HeroText h1 {
@@ -123,7 +128,13 @@ html.modal-open {
     
     margin: 1rem 0 0.5rem 0;
 
-    line-height: 0.9;
+    letter-spacing: -0.02em;
+    line-height: 0.88;
+    text-shadow:
+        0 4px 60px rgba(0, 0, 0, 0.25),
+        0 1px 0 rgba(255, 255, 255, 0.05);
+    opacity: 0;
+    animation: heroFadeUp 1.1s cubic-bezier(0.22, 1, 0.36, 1) 0.35s forwards;
 }
 
 #HeroText h2{
@@ -140,6 +151,11 @@ html.modal-open {
     display: flex;
     align-items: center;
     width: 100%;
+     letter-spacing: 0.025em;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.65);
+  opacity: 0;
+  animation: heroFadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.75s forwards;
 }
 
 #Tag {
@@ -149,13 +165,23 @@ html.modal-open {
     font-style: italic;
     font-weight: 500;
     gap: 10px;
+
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.68);
+    opacity: 0;
+    animation: heroFadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.15s forwards;
 }
 
 #Tag::after {
     content: "";
     width: 20%; 
     max-width: 15rem;
-    height: 2px; 
+    height: 1px; /* thinner, more refined */
+    background: rgba(255, 255, 255, 0.35);
+    animation: growLine 0.9s ease 0.9s forwards;
+    width: 0;
     background-color: white; 
     display: inline-block;
 }
@@ -244,6 +270,15 @@ html.modal-open {
     transform: translateY(0);
 }
 
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes growLine {
+  from { width: 0; }
+  to   { width: clamp(100px, 30%, 350px); }
+}
+
 @keyframes bounce {
     0%, 100% {
         transform: translateX(-50%) translateY(0);
@@ -279,10 +314,6 @@ html.modal-open {
 
     #HeroText h1 {
         margin-bottom: 3rem;
-    }
-
-    #HeroText hr {
-        margin-bottom: 1rem;
     }
 
     body {
