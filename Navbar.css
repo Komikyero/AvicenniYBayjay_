@@ -357,6 +357,16 @@ footer {
     display: flex;
     justify-content: flex-start; 
     align-items: center;
+
+    opacity: 0.85;
+
+    transition: opacity 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
+}
+
+.fContentWrap:hover {
+    opacity: 1;
+    transform: scale(1.03);
 }
 
 .fContentWrap a {
@@ -394,7 +404,7 @@ footer {
     color: #6a8a50 ;
     border-top: 1px solid #3a5a20;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.61);
-    padding: 1.4rem 1rem 5rem 1rem;
+    padding: 2rem 1rem 4rem 1rem;
 }
 
 #Contacts {
@@ -404,6 +414,7 @@ footer {
     justify-content: center;
     
     gap: 0.8rem;
+    opacity: 0.85;
 
     max-width: 400px;
 }
@@ -424,6 +435,10 @@ footer {
 #FooterAbout {
     line-height: 1.6;
     opacity: 0.85;
+}
+
+#footerWrap hr {
+        opacity: 0.85;
 }
 
 @media (min-width: 900px) {

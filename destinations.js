@@ -77,17 +77,19 @@ function setActive(index) {
     }
 }
 
-mapsBtn.addEventListener("click", (e) => {
-    const destination = CardTappedName.textContent;
+mapsBtn.addEventListener("click", () => {
+    const name = CardTappedName.textContent.trim();
+    const location = CardLocation.textContent.trim();
 
-    if (!destination) return;
+    if (!name && !location) return;
 
-    window.open(
-        `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(destination)}`,
-        "_blank"
-    );
+    const destination = `${name}, ${location}`.replace(/^,\s*|,\s*$/g, "");
 
-    console.log("Maps button href:", mapsBtn.href);
+    const url = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(destination)}`;
+
+    window.open(url, "_blank");
+
+    console.log("Maps URL:", url);
 });
 
 function getCardWidth() {

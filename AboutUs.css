@@ -232,6 +232,59 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     display: block;
 }
 
+.AboutUs-eyebrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2em;
+    position: relative;
+    z-index: 2;
+}
+
+#EyebrowHead {
+    padding: 0;
+    margin: 0;
+}
+
+.AboutUs-eyebrow span {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--Accent-Color);
+    opacity: 0.85;
+}
+
+.AboutUs-eyebrow::before,
+.AboutUs-eyebrow::after {
+    content: '';
+    display: block;
+    width: 36px;
+    height: 1px;
+    background: var(--Accent-Color);
+    opacity: 0.4;
+}
+
+/* TAB META */
+.tab-meta {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.tab-meta span {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--Accent-Color);
+    opacity: 0.75;
+    padding: 0.5rem 1.1rem;
+    border: 1px solid rgba(232, 209, 167, 0.25);
+    border-radius: 999px;
+    background: rgba(232, 209, 167, 0.07);
+}
+
 @keyframes fadeSlide {
     from {
         opacity: 0;

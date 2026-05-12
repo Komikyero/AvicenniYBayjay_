@@ -4,12 +4,16 @@
     --Primary-Color: #250F02;
     --TextColorLight: #FFF7E0;
     --TextColorDark: #3A1600;
+
+    --main-font: 'Outfit', 'Inter', Arial, sans-serif;
+    --header-font: 'Kurale', 'Georgia', serif;
 }
 
 .Products { 
     background-color: #fff2da; 
     height: fit-content; 
     display: flex; 
+    padding: 3rem 0;
     flex-direction: column;
     align-items: center; 
     justify-content: center; 
@@ -23,7 +27,7 @@
     justify-items: center;  
     align-items: stretch;  
     gap: 4rem;
-    padding: 4rem 0;
+    padding-bottom: 4rem;
     margin-left: 1%;
     margin-right: 1%;
     height: fit-content;
@@ -61,8 +65,31 @@
     opacity: 1;
 }
 
+#Card1 {
+    background-image: url(images/Screenshot\ 2026-04-30\ 110521.png);
+}
+
+#Card2 {
+    background-image: url(images/Screenshot\ 2026-04-30\ 110748.png);
+}
+
+#Card3 {
+    background-image: url(images/Screenshot\ 2026-04-30\ 110839.png);
+}
+
+#Card4 {
+    background-image: url(images/Screenshot\ 2026-04-30\ 110913.png);
+}
+
+#Card5 {
+    background-image: url(images/Screenshot\ 2026-04-30\ 110521.png);
+}
+
+#Card6 {
+    background-image: url(images/Screenshot\ 2026-04-30\ 110521.png);
+}
+
 .Card {
-    background-image: url('ph2.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -105,6 +132,7 @@
 }
 
 .CardName {
+    font-family: var(--header-font);
     font-size: clamp(1.4rem, 2vw, 2rem);
     font-weight: 700;
     margin: 0;
@@ -232,8 +260,7 @@
 
 #ProductsHeader {
     text-align: center;
-    padding: 3rem 1rem 0.5rem;
-    border: 1px solid red;
+    padding: 3rem 1rem ;
 }
 
 #ProductsEyebrow {
@@ -268,7 +295,7 @@
      #CardGrid {
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
-        padding: 3rem 2rem;
+        padding-bottom: 3rem;
     }
 
     #DelicaciesContentBG h1{
@@ -291,7 +318,18 @@
     }
     
     #CardGrid {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .DelicaciesBG {
+        font-size: 5rem;
+    }
+    
+    #CardGrid {
+        grid-template-columns: repeat(4, 1fr);
         gap: 5rem;
     }
 }
